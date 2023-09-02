@@ -1,0 +1,10 @@
+.mx-table {
+    .table-hover > tbody > tr {
+        transition: all .3s ease;
+    }
+    .table-hover > tbody > tr:hover {
+        --bs-table-accent-bg: white;
+        color: var(--bs-table-hover-color);
+        box-shadow: 0 5px 15px rgba($black, .1);
+    }
+}

@@ -1,0 +1,8 @@
+.mx-faq-banner {
+    @include md-screen {
+        background: $white url(../img/faq-1-bg.png);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}

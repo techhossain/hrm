@@ -1,0 +1,28 @@
+.progress {
+    border-radius: 0.5rem;
+    &--count {
+        overflow: initial;
+    }
+    &-bar {
+        position: relative;
+        border-radius: 0.5rem;
+    }
+    &--xsm {
+        height: 1px;
+        font-size: 0.65rem;
+    }
+    &--sm {
+        height: 0.25rem;
+        font-size: 0.65rem;
+    }
+    &--md {
+        height: 0.60rem;
+        font-size: 0.75rem;
+    }
+    &__info {
+        position: absolute;
+        right: 0;
+        bottom: 100%;
+        color: $heading-text;
+    }
+}

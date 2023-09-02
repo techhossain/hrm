@@ -1,0 +1,90 @@
+.mx-sidenav-collapsed {
+    .mx-sidenav {
+        max-width: 110px;
+        transition: all 0.3s ease;
+        &__logo {
+            display: none !important;
+            &-sm {
+                display: block !important;
+            }
+        }
+        &__menu {
+            &[data-simplebar] {
+                overflow: auto;
+            }
+            &.mx-sidenav__menu--dark {
+                .mx-sidenav__menu-item.mx-sidenav__has-sub {
+                    &:hover {
+
+                        .mx-sidenav__menu-link {
+                            background: darken($color-17, 8%);
+                        }
+                    }
+                }
+            }
+        }
+        &__sub {
+            display: none;
+        }
+    }
+    .mx-sidenav__menu-item.active-page
+        .mx-sidenav__menu-link
+        .mx-sidenav__menu-text {
+        display: none;
+    }
+    .mx-sidenav__menu-item.active-page .mx-sidenav__menu-link::after {
+        display: none;
+    }
+    .mx-sidenav__menu-text {
+        display: none;
+    }
+    .mx-sidenav__menu-title {
+        display: none;
+    }
+    .mx-sidenav__menu-item.mx-sidenav__has-sub {
+        .mx-sidenav__sub--hide {
+            display: none !important;
+        }
+        &:hover {
+
+            &::after {
+                display: none !important;
+            }
+            .mx-sidenav__menu-link {
+                width: 350px;
+                z-index: 9999;
+                background: darken($primary, 8%);
+                position: relative;
+                &::before {
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+            .mx-sidenav__menu-text {
+                display: block;
+                margin-left: 55px;
+                color: $white;
+            }
+            .mx-sidenav__menu-icon {
+                color: $white;
+            }
+            .mx-sidenav__sub {
+                width: 255px;
+                padding-right: 0 !important;
+                display: block !important;
+                position: absolute;
+                left: 100%;
+                top: 97%;
+                z-index: 9999;
+            }
+            .mx-sidenav__sub-item:first-child .mx-sidenav__sub-link {
+                border-radius: 0;
+            }
+            .mx-sidenav__sub-item:last-child .mx-sidenav__sub-link {
+                border-radius: 0 0 5px 0;
+            }
+        }
+    }
+}

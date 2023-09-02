@@ -1,0 +1,45 @@
+.mx-sticky-note {
+    padding: 30px 15px;
+    position: relative;
+    overflow: hidden;
+    &--info {
+        background: rgba($eta, 0.1);
+    }
+    &--warning {
+        background: rgba($lambda, .1);
+    }
+    &--danger {
+        background: rgba($epsilon, .1);
+    }
+    &--success {
+        background: rgba($delta, .1);
+    }
+    &__counter {
+        position: absolute;
+        right: 0;
+        font-size: 1.8rem; //28.8px
+        @include md-screen {
+            font-size: 2.4rem; //38.4px
+        }
+        @include xl-screen {
+            font-size: 3rem; //48px
+        }
+        line-height: 1;
+        font-weight: 700;
+        &--info {
+            color: rgba($eta, .3);
+        }
+        &--warning {
+            color: rgba($lambda, .3);
+        }
+        &--danger {
+            color: rgba($epsilon, .3);
+        }
+        &--success {
+            color: rgba($delta, .3);
+        }
+    }
+    &__title {
+        text-transform: capitalize;
+    }
+}

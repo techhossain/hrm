@@ -1,0 +1,46 @@
+.mx-source {
+    position: relative;
+    &-toggler {
+        display: flex;
+        justify-content: flex-end;
+        &-close {
+            display: none;
+        }
+        &-icon {
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 3px 3px 0 0;
+            transition: all 0.3s ease;
+            &:hover {
+                cursor: pointer;
+                color: $success;
+            }
+        }
+    }
+
+    &__body {
+        max-height: 300px;
+        overflow: scroll;
+        display: none;
+    }
+    pre[class*="language-"] {
+        margin: 0;
+    }
+    div.code-toolbar > .toolbar {
+        opacity: 1;
+    }
+    div.code-toolbar > .toolbar button {
+        padding: 5px 10px;
+        font-size: 0.8em;
+        color: $delta;
+        box-shadow: none;
+        border: 1px solid $delta;
+        border-radius: 2px;
+        background: $white;
+        transition: all .3s ease;
+        &:hover {
+            background: $delta;
+            color: $white;
+        }
+    }
+}

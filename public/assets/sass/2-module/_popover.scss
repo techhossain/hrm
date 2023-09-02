@@ -1,0 +1,19 @@
+.popover-header {
+	padding: .5rem 1.25rem;
+	font-size: 1rem;
+	text-transform: capitalize;
+	margin-top: 0;
+	margin-bottom: 0;
+	background: $white;
+	border-bottom: 1px solid #EBEDF3;
+}
+.popover {
+	border: none;
+	box-shadow: 0 5px 20px rgba($dark, .2);
+}
+.bs-popover-right .arrow::before, .bs-popover-auto[x-placement^="right"] .arrow::before {
+    border-right-color: transparent;
+}
+.popover-body {
+    padding: 1rem 1.25rem;
+}

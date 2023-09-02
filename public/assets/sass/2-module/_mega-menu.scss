@@ -1,0 +1,50 @@
+.mega-menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba($dark, 0.8);
+    &__title {
+        font-family: $heading-font;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+        color: lighten($dark, 60%);
+    }
+    &__list {
+        padding-left: 15px;
+        padding-right: 15px;
+        min-width: 240px;
+        margin-bottom: 15px;
+        @include md-screen {
+            min-width: 200px;
+        }
+        @include lg-screen {
+            min-width: 150px;
+        }
+        @include xl-screen {
+            min-width: 200px;
+        }
+    }
+    &__link {
+        display: inline-block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 14px;
+        color: lighten($dark, 40%);
+        &:hover {
+            color: $alpha;
+            text-decoration: none;
+        }
+    }
+    &__toggle {
+        display: inline-block;
+        position: relative;
+        height: 32px;
+        line-height: 32px;
+        &::after {
+            content: "\f107";
+            font-family: "Line Awesome Free";
+            font-weight: 900;
+        }
+    }
+}

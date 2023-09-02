@@ -1,0 +1,12 @@
+.max-main {
+    background: $beta;
+    transition: all .3s ease;
+    @include lg-screen {
+        margin-left: 280px;
+    }
+}
+.main-content {
+    @include xl-screen {
+        min-height: calc(100vh - 195px);
+    }
+}

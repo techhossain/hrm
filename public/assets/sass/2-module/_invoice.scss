@@ -1,0 +1,36 @@
+.invoice {
+    &__banner {
+        width: 100%;
+        height: 220px;
+        background-color: darken($primary, 2%);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &-bg {
+            background-image: url(../img/invoice-banner.png);
+        }
+    }
+    &__content {
+        margin-top: -150px;
+    }
+    &__head {
+        padding: 30px 15px;
+        background-color: $gamma;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include md-screen {
+            padding: 50px 30px;
+        }
+    }
+    &__body {
+        padding: 30px 15px;
+        background-color: $white;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include md-screen {
+            padding: 50px 30px;
+        }
+    }
+}

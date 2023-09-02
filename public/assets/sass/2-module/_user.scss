@@ -1,0 +1,9 @@
+.mx-user {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 100%;
+    &--sm {
+        width: 30px;
+        height: 30px;
+    }
+}

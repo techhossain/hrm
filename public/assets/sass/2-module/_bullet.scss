@@ -1,0 +1,18 @@
+.mx-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: transparent;
+    
+    box-shadow: 0 0 0 2px $white;
+    &--primary {
+        border: 2px solid $gamma;
+    }
+    &--danger {
+        border: 2px solid $epsilon;
+    }
+    &--warning {
+        border: 2px solid $lambda;
+    }
+}
+

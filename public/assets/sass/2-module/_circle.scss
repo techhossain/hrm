@@ -1,0 +1,11 @@
+.mx-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    &--sm {
+        width: 30px;
+        height: 30px;
+        line-height: 1;
+    }
+}

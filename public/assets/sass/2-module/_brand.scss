@@ -1,0 +1,8 @@
+.max-brand {
+    max-width: 200px;
+    width: 100%;
+    &--mobile {
+        max-width: 120px;
+        width: 100%;
+    }
+}

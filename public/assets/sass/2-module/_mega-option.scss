@@ -1,0 +1,15 @@
+.mx-mega-option {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    border-radius: 10px;
+    &__content {
+        flex: 1;
+        margin-left: 15px;
+        &-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}

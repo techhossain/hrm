@@ -1,0 +1,15 @@
+.mx-mobile-menu {
+    display: flex;
+    align-items: center;
+    &__link {
+        display: block;
+        padding: 15px 5px;
+        font-size: 28px;
+        color: $white;
+        transition: all .3s ease;
+        &:hover {
+            color: $white;
+            background: darken($primary, 3%);
+        }
+    }
+}

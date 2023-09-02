@@ -1,0 +1,83 @@
+.mx-price-card {
+    &__head {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        &-icon {
+            display: block;
+            font-size: 44px;
+            line-height: 1;
+        }
+    }
+    &__title {
+        display: block;
+        font-family: $heading-font;
+        font-size: 24px;
+        line-height: 1;
+        font-weight: 700;
+    }
+    &__price {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-image: url(../img/price-bg.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &-bg {
+            background: rgba($gamma, 1);
+        }
+        &-is {
+            font-family: $heading-font;
+            font-size: 2.56rem; //40.96px
+            line-height: 1;
+            font-weight: 700;
+
+            @include md-screen {
+                font-size: 3.2rem; //51.2px
+            }
+            @include xl-screen {
+                font-size: 4rem; //64px
+            }
+        }
+        &-info {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.8;
+        }
+    }
+    &__body {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    &__list {
+        &-item {
+            display: flex;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &.disabled {
+                opacity: 0.5;
+            }
+        }
+        &-icon {
+            margin-right: 10px;
+            font-size: 24px;
+            line-height: 1;
+        }
+        &-text {
+            font-size: 14px;
+        }
+    }
+    &__footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

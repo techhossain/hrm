@@ -1,0 +1,14 @@
+.mx-task-author {
+    position: relative;
+    padding: 30px 15px;
+    &__list {
+        a.active {
+            background: $light-3;
+            color: $gamma;
+        }
+    }
+    &__action {
+        position: absolute;
+        right: 15px;
+    }
+}

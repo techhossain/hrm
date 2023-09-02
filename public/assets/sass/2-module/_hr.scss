@@ -1,0 +1,6 @@
+.mx-hr {
+    margin: .5rem 0;
+    &--primary {
+        background: lighten($primary, 25%);
+    }
+}

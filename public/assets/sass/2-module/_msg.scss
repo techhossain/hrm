@@ -1,0 +1,16 @@
+.mx-msg {
+    position: relative;
+    padding: 30px;
+    border-radius: 0 5px 5px 5px;
+    background: darken($color-5, 2%);
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 100%;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid transparent;
+        border-right: 8px solid darken($color-5, 2%);
+    }
+}

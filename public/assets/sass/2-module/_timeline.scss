@@ -1,0 +1,204 @@
+.mx-timeline {
+    position: relative;
+    padding: 30px;
+    border-radius: 2px;
+    &--bordered {
+        border: 2px solid rgba($border, 0.4);
+    }
+    &-1 {
+        .mx-timeline__container {
+            position: relative;
+            z-index: 1;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 53px;
+                width: 2px;
+                background: $border;
+                z-index: -1;
+            }
+        }
+    }
+    &-2 {
+        .mx-timeline__container {
+            position: relative;
+            z-index: 1;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 3px;
+                width: 2px;
+                background: $border;
+                z-index: -1;
+            }
+        }
+    }
+    &-4 {
+        .mx-timeline__container {
+            position: relative;
+            z-index: 1;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 14px;
+                width: 2px;
+                background: $border;
+                z-index: -1;
+            }
+        }
+    }
+    &-5 {
+        .mx-timeline__container {
+            position: relative;
+            z-index: 1;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 2px;
+                background: $border;
+                z-index: -1;
+            }
+        }
+    }
+    &-6 {
+        .mx-timeline__container {
+            position: relative;
+            z-index: 1;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 2px;
+                background: $border;
+                z-index: -1;
+            }
+        }
+        .mx-timeline__msg-is {
+            width: 100%;
+        }
+        .mx-timeline__msg-sent .mx-timeline__ring {
+            right: 100%;
+            transform: translateX(50%);
+        }
+    }
+    &__time {
+        display: block;
+    }
+    &__text {
+        width: 50px;
+        display: block;
+    }
+    &__ring {
+        width: 8px;
+        min-width: 8px;
+        height: 8px;
+        min-height: 8px;
+        margin-top: 3px;
+        border-radius: 50%;
+        background: $white;
+        &--primary {
+            box-shadow: 0 0 0 3px $primary;
+        }
+        &--success {
+            box-shadow: 0 0 0 3px $delta;
+        }
+        &--danger {
+            box-shadow: 0 0 0 3px $epsilon;
+        }
+        &--secondary {
+            box-shadow: 0 0 0 3px $secondary;
+        }
+        &--warning {
+            box-shadow: 0 0 0 3px $warning;
+        }
+        &--gamma {
+            box-shadow: 0 0 0 3px $gamma;
+        }
+    }
+    &__img {
+        position: absolute;
+        left: 0;
+        transform: translateX(-50%);
+    }
+    &__content {
+        padding-left: 15px;
+        p {
+            line-height: 1.2;
+        }
+    }
+    &__msg {
+        position: relative;
+        .mx-timeline__ring {
+            position: absolute;
+            top: 15px;
+        }
+        &-receive {
+            .mx-timeline__ring {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &-sent {
+            display: flex;
+            justify-content: flex-end;
+            .mx-timeline__ring {
+                right: 50%;
+                transform: translateX(50%);
+            }
+        }
+        &-is {
+            position: relative;
+            width: 50%;
+            .mx-timeline__msg-time {
+                position: absolute;
+                bottom: 100%;
+            }
+            &-receive {
+                position: relative;
+                padding-right: 30px;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    border-top: 8px solid transparent;
+                    border-bottom: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-left: 8px solid #edf6fb;
+                }
+                .mx-timeline__msg-time {
+                    right: 30px;
+                } 
+            }
+            &-sent {
+                position: relative;
+                padding-left: 30px;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    border-top: 8px solid transparent;
+                    border-bottom: 8px solid transparent;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid #edf6fb;
+                }
+                .mx-timeline__msg-time {
+                    left: 30px;
+                } 
+            }
+        }
+    }
+}

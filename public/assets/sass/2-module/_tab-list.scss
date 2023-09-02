@@ -1,0 +1,33 @@
+.mx-tab-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    @include md-screen {
+        flex-direction: row;
+    }
+    @include xlii-screen {
+        justify-content: center;
+    }
+    &__item {
+        margin-bottom: 10px;
+        position: relative;
+        @include md-screen {
+            margin-right: 15px;
+        }
+    }
+    &__link {
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background: $white;
+        @include xl-screen {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+    &__counter {
+        bottom: 0;
+    }
+}

@@ -1,0 +1,11 @@
+.mx-kanban-card {
+    &__header {
+        position: relative;
+        &-action {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+        }
+
+    }
+}

@@ -1,0 +1,27 @@
+.mx-sticky-pannel-bar {
+    padding: 30px;
+    &__item {
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__link {
+        display: flex !important;
+        align-items: center;
+        font-family: $heading-font;
+        color: $color-4;
+        &:hover {
+            color: $gamma;
+        }
+        &.active {
+            color: $gamma;
+        }
+    }
+    &__icon {
+       display: inline-block;
+    }
+    &__text {
+        flex: 1;
+    }
+}

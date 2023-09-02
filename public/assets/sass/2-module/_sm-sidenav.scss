@@ -1,0 +1,142 @@
+.mx-sm-sidenav {
+    background: darken($primary, 2%);
+    &.mx-sm-sidenav--dark {
+        background: $dark;
+        .mx-sm-sidenav__sub {
+            background: $dark;
+        }
+        .mx-sm-sidenav__link:hover {
+            background: darken($dark, 5%);
+        }
+    }
+    &__has-sub {
+        .mx-sm-sidenav__link {
+            &::after {
+                content: "\f107";
+                font-family: "Line Awesome Free";
+                font-weight: 900;
+                font-size: 14px;
+                color: $white;
+                transition: all 0.3s ease;
+                margin-left: auto;
+            }
+        }
+        &-set {
+            .mx-sm-sidenav__sub-link {
+                &::after {
+                    content: "\f107";
+                    font-family: "Line Awesome Free";
+                    font-weight: 900;
+                    font-size: 14px;
+                    color: $white;
+                    transition: all 0.3s ease;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+    &__list {
+        border-bottom: 1px solid darken($primary, 5%);
+    }
+    &__link {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        align-items: center;
+        color: $white;
+        line-height: 1;
+        transition: all 0.3s ease;
+        &:hover {
+            background: darken($primary, 10%);
+            color: $white;
+        }
+        &.active {
+            position: relative;
+            &::after {
+                content: "\f106";
+            }
+        }
+    }
+    &__icon {
+        display: inline-block;
+        font-size: 24px;
+        line-height: 1;
+    }
+    &__text {
+        font-size: 14px;
+        letter-spacing: 0.03em;
+    }
+    &__sub {
+        display: none;
+        background: darken($primary, 4%);
+        &-list {
+            border-bottom: 1px solid darken($primary, 7%);
+        }
+        &-link {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 30px;
+            padding-right: 15px;
+            display: flex;
+            align-items: center;
+            color: $white;
+            line-height: 1;
+            transition: all 0.3s ease;
+            &:hover {
+                background: darken($primary, 10%);
+                color: $white;
+            }
+            &.active {
+                position: relative;
+                &::after {
+                    content: "\f106";
+                }
+            }
+        }
+        &-icon {
+            display: inline-block;
+            font-size: 24px;
+            line-height: 1;
+        }
+        &-text {
+            font-size: 14px;
+            letter-spacing: 0.03em;
+        }
+    }
+    &__sub-set {
+        display: none;
+        background: darken($primary, 8%);
+        &-link {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 30px;
+            padding-right: 15px;
+            display: flex;
+            align-items: center;
+            color: $white;
+            line-height: 1;
+            transition: all 0.3s ease;
+            &:hover {
+                background: darken($primary, 10%);
+                color: $white;
+            }
+        }
+        &-icon {
+            display: inline-block;
+            font-size: 18px;
+            line-height: 1;
+        }
+        &-text {
+            font-size: 14px;
+            letter-spacing: 0.03em;
+        }
+    }
+    &__sub-title {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        position: relative;
+        opacity: 0.8;
+    }
+}

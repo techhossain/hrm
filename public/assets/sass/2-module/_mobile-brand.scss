@@ -1,0 +1,9 @@
+.mx-mobile-brand {
+    height: 48px;
+    display: flex;
+    &__is {
+        max-height: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}

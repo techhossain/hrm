@@ -13,16 +13,14 @@ return new class extends Migration
     {
         Schema::create('attendances', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('department_id');
             $table->foreignId('employee_id');
-            $table->string('location');
-            $table->string('attentance_by');
-            $table->integer('year');
-            $table->string('month');
-            $table->string('clock_in_time');
-            $table->string('clock_out_time');
+            $table->time('clock_in_time');
+            $table->ipAddress('clock_in_ip');
+            $table->time('clock_out_time');
+            $table->ipAddress('clock_out_ip');
             $table->boolean('late');
             $table->boolean('half_day');
+            $table->string('location');
             $table->string('work_from');
             $table->timestamps();
         });

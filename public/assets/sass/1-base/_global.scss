@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700');
+
+html {
+	font-size: 16px;
+}
+
+body {
+	background-color: $white;
+	font-family: $body-font;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: $text;
+	overflow-x: hidden;
+}
+
+p {
+	margin-bottom: 1.25rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 0.9rem 0 0.6rem;
+
+	@include md-screen {
+		margin: 1.2rem 0 0.8rem;
+	}
+	@include xl-screen {
+		margin: 1.5rem 0 1rem;
+	}
+	font-family: $heading-font;
+	font-weight: 600;
+	line-height: 1.2;
+	color: $heading-text;
+}
+
+h1 {
+	margin-top: 0;
+	font-size: 2.56rem; //40.96px
+
+	@include md-screen {
+		font-size: 3.2rem; //51.2px
+	}
+	@include xl-screen {
+		font-size: 4rem; //64px
+	}
+}
+
+h2 {
+	font-size: 1.8rem; //28.8px
+	@include md-screen {
+		font-size: 2.4rem; //38.4px
+	}
+	@include xl-screen {
+		font-size: 3rem; //48px
+	}
+}
+
+
+h3 {
+	font-size: 1.125rem; //18px
+	@include md-screen {
+		font-size: 1.5rem; //24px
+	}
+	@include xl-screen {
+		font-size: 1.875rem; //30px
+	}
+}
+
+h4 {
+	font-size: 1.0625rem;  //17px
+	@include md-screen {
+		font-size: 1.2rem; //19.2px
+	}
+	@include xl-screen {
+		font-size: 1.5rem; //24px
+	}
+}
+h5 {
+	font-size: 1.05rem; //16.8px
+	font-weight: 600;
+	@include md-screen {
+		font-size: 1.1rem; //17.6px
+	}
+	@include xl-screen {
+		font-size: 1.25rem; //20px
+	}
+}
+
+h6 {
+	font-size: 1rem; //16px
+	font-weight: 600;
+	color: $heading-text;
+	font-family: $heading-font;
+	line-height: 1.2;
+	@include md-screen {
+		font-size: 1.05rem; //16.8px
+	}
+	@include xl-screen {
+		font-size: 1.125rem; //18px
+	}
+}
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.xsm-text {
+	font-size: 12px;
+}
+small,
+.sm-text {
+	font-size: 14px ;
+}
+.lg-text {
+	font-size: 18px;
+}
+.xlg-text {
+	font-size: 20px;
+}
+.xxlg-text {
+	font-size: 24px;
+}
+button {
+	&:focus {
+		outline: none !important;
+	}
+}
+.btn:focus,
+.btn.focus {
+	outline: none;
+	box-shadow: none;
+}
+
+input:focus {
+	outline: none;
+}
+.form-control {
+	border-color: rgba($black, 0.1);
+}
+.form-control:focus {
+	border-color: rgba($black, 0.1);
+	outline: none;
+	box-shadow: none;
+}
+textarea {
+	resize: none;
+}
+input::placeholder {
+	font-size: 14px;
+	text-transform: capitalize;
+}
+code {
+	font-size: 12px !important;
+}
+.table-bordered thead th, .table-bordered thead td {
+	border-bottom-width: 1px;
+	min-width: 150px;
+}
+.table-bordered thead th:first-child, .table-bordered thead td:first-child {
+	min-width: 30px;
+}
+.table th, .table td {
+    vertical-align: middle;
+}
+.btn-flat {
+	margin: 5px;
+}
+.dtp .dtp-buttons {
+	display: flex;
+	justify-content: center;
+}
+.table thead th {
+    vertical-align: middle;
+    border-bottom: 1px solid #dee2e6;
+}
+.table-borderless th, .table-borderless td, .table-borderless thead th, .table-borderless tbody + tbody {
+    border: 0;
+}
+.table > :not(:last-child) > :last-child > * {
+    border-bottom-color: inherit;
+}
+.text-justify {
+	text-align: justify;
+}
+.input-group-text {
+    color: #3f4254;
+    background-color: #f3f6f9;
+    border: 1px solid #e4e6ef;
+}
+.dropdown-menu {
+	border: none;
+	border-radius: 0;
+	box-shadow: 0 5px 15px rgba($primary, .2);
+}

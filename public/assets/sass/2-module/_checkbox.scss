@@ -1,0 +1,155 @@
+.mx-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    &--empty {
+        .mx-checkbox__input-sm + .mx-checkbox__text:before {
+            left: 4px;
+            top: 0;
+        }
+    }
+
+    &__text {
+        padding-left: 8px;
+    }
+    &__input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        outline: none;
+        transition-duration: 0.3s;
+        cursor: pointer;
+        &:checked {
+            + .mx-checkbox__text::before {
+                content: "\f00c";
+                font-family: "Line Awesome Free";
+                font-weight: 900;
+                display: block;
+                text-align: center;
+                position: absolute;
+            }
+        }
+        &:active {
+            border: 2px solid #34495e;
+        }
+        &-solid {
+            background: $light-3;
+            border: 1px solid darken($light-3, 5%);
+            &:hover {
+                background: darken($light-3, 3%);
+            }
+            &:checked {
+                + .mx-checkbox__text::before {
+                    color: $white;
+                }
+            }
+            &--primary {
+                &:checked {
+                    border: 1px solid darken($gamma, 5%);
+                    background: $gamma;
+                }
+            }
+            &--secondary {
+                &:checked {
+                    border: 1px solid darken($secondary, 5%);
+                    background: $secondary;
+                }
+            }
+            &--success {
+                &:checked {
+                    border: 1px solid darken($delta, 5%);
+                    background: $delta;
+                }
+            }
+            &--danger {
+                &:checked {
+                    border: 1px solid darken($epsilon, 5%);
+                    background: $epsilon;
+                }
+            }
+            &--warning {
+                &:checked {
+                    border: 1px solid darken($zeta, 5%);
+                    background: $zeta;
+                }
+            }
+            &--info {
+                &:checked {
+                    border: 1px solid darken($eta, 5%);
+                    background: $eta;
+                }
+            }
+        }
+        &-outline {
+            border: 1px solid darken($light-3, 10%);
+            &--primary {
+                &:checked {
+                    border: 1px solid $gamma;
+                    + .mx-checkbox__text::before {
+                        color: $gamma;
+                    }
+                }
+            }
+            &--secondary {
+                &:checked {
+                    border: 1px solid $secondary;
+                    + .mx-checkbox__text::before {
+                        color: $secondary;
+                    }
+                }
+            }
+            &--success {
+                &:checked {
+                    border: 1px solid $delta;
+                    + .mx-checkbox__text::before {
+                        color: $delta;
+                    }
+                }
+            }
+            &--danger {
+                &:checked {
+                    border: 1px solid $epsilon;
+                    + .mx-checkbox__text::before {
+                        color: $epsilon;
+                    }
+                }
+            }
+            &--warning {
+                &:checked {
+                    border: 1px solid $zeta;
+                    + .mx-checkbox__text::before {
+                        color: $zeta;
+                    }
+                }
+            }
+            &--info {
+                &:checked {
+                    border: 1px solid $eta;
+                    + .mx-checkbox__text::before {
+                        color: $eta;
+                    }
+                }
+            }
+        }
+        &-sm {
+            height: 18px;
+            width: 18px;
+            + .mx-checkbox__text:before {
+                font-size: 11px;
+                left: 4px;
+                top: 3px;
+            }
+            + .mx-checkbox__text {
+                font-size: 14px;
+            }
+        }
+        &-radius {
+            border-radius: 2px;
+        }
+        &-circle {
+            border-radius: 50px;
+        }
+    }
+}

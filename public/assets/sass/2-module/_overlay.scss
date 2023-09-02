@@ -1,0 +1,93 @@
+.mx-overlay {
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        .mx-overlay__backdrop {
+            opacity: 1;
+            visibility: visible;
+        }
+        .mx-overlay__img {
+            transform: scale(1.05);
+        }
+    }
+    &__img {
+        transition: all .3s ease;
+    }
+    &__backdrop {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease;
+        &--cover {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+        &--space {
+            top: 15px;
+            left: 15px;
+            bottom: 15px;
+            right: 15px;
+        }
+        &--alpha {
+            background: rgba($alpha, .9);
+        }
+        &--dark {
+            background: rgba($black, .5);
+        }
+    }
+    &__position {
+        position: absolute;
+        &--start {
+            left: 0;
+            top: 0;
+            right: 0;
+        }
+        &--center {
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+        }
+        &--end {
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+    &__content {
+        padding: 30px;
+    }
+    &__sub-title {
+        display: block !important;
+        font-size: 12px;
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+    }
+    &__title {
+        display: block !important;
+        font-family: $heading-font;
+        font-size: 16px;
+        font-weight: 500;
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+    }
+    &__icon {
+        background: $white;
+        transition: all .3s ease;
+        &:hover {
+            color: $white;
+        }
+        &-gamma {
+            color: $gamma;
+            &:hover {
+                background: $gamma;
+            }
+        }
+    }
+}

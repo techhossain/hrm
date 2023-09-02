@@ -1,0 +1,24 @@
+.tabs {
+    .list-group-item:first-child {
+        border-radius: 0;
+    }
+    .list-group-item:last-child {
+        border-radius: 0;
+        margin-bottom: -1px;
+    }
+    &--borderless {
+        .list-group-item {
+            border: 1px solid transparent;
+        }
+        &-active {
+            .list-group-item {
+                border: 1px solid transparent;
+            }
+            .list-group-item.active {
+                background: transparent;
+                border: 1px solid $gamma;
+                color: $gamma;
+            }
+        }
+    }
+}

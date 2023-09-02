@@ -1,0 +1,79 @@
+.mx-price-3 {
+    &__head {
+        background: darken($light-2, 2%);
+        padding: 30px;
+        &-active {
+            @include xl-screen {
+                background: $gamma;
+                border-right: 5px solid darken($light-2, 2%);
+                .mx-price-3__title {
+                    color: $white;
+                }
+                .mx-price-3__rate {
+                    color: $white;
+                }
+                .mx-price-3__rate-duration {
+                    color: $white;
+                }
+                .mx-price-3__offer-icon {
+                    color: $white;
+                }
+                .mx-price-3__offer-text {
+                    color: $white;
+                }
+            }
+        }
+    }
+    &__title {
+        display: block;
+        font-family: $heading-font;
+        font-weight: 700;
+        line-height: 1;
+    }
+    &__rate {
+        font-family: $heading-font;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1;
+        &-duration {
+            font-family: $heading-font;
+            font-size: 12px;
+            line-height: 1;
+        }
+    }
+    &__offer {
+        display: flex;
+        align-items: center;
+        &-icon {
+            line-height: 1;
+        }
+        &-text {
+            font-family: $heading-font;
+            font-size: 12px;
+            line-height: 1;
+        }
+    }
+    &__body {
+        padding: 30px;
+        background: $light-2;
+    }
+    &__list {
+        &-item {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__bottom {
+        border: 10px solid $gamma;
+    }
+    &__option {
+        padding: 30px;
+        background: $gamma;
+        &-available {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+}

@@ -1,0 +1,167 @@
+.mx-sidenav {
+    min-height: 100vh;
+    position: relative;
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+    &__brand {
+        padding: 15px 30px;
+    }
+    &__logo {
+        height: 42px;
+        &-is {
+            height: 100%;
+        }
+        &-sm {
+            @extend .mx-sidenav__logo;
+            display: none !important;
+            &-is {
+                @extend .mx-sidenav__logo-is;
+            }
+        }
+    }
+    &__menu {
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        &.mx-sidenav__menu--dark {
+            .mx-sidenav__sub-link {
+                background: darken($color-17, 4%);
+            }
+            .mx-sidenav__sub-link.active-page {
+                background: darken($color-17, 6%);
+            }
+            .mx-sidenav__menu-item.active-page .mx-sidenav__menu-link .mx-sidenav__menu-icon {
+                color: $dark;
+            }
+        }
+        &-item {
+            margin-bottom: 5px;
+            &.active-page {
+                position: relative;
+
+                .mx-sidenav__menu-link {
+                    position: relative;
+                    background: $color-16;
+                    &::after {
+                        color: $heading-text;
+                    }
+                    .mx-sidenav__menu-icon {
+                        color: $primary;
+                    }
+                    .mx-sidenav__menu-text {
+                        color: $heading-text;
+                    }
+                }
+            }
+        }
+        &-link {
+            padding: 12px 30px;
+            display: flex;
+            align-items: center;
+            border-radius: 30px;
+            color: $white;
+            transition: all 0.3s ease;
+            &:hover {
+                color: $white;
+                background: rgba($white, 0.1);
+            }
+        }
+        &-icon {
+            font-size: 24px;
+            line-height: 1;
+        }
+        &-text {
+            font-size: 14px;
+            letter-spacing: 0.05em;
+        }
+        &-title {
+            padding: 12px 0;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: .05em;
+            color: $white;
+        }
+    }
+    &__has-sub {
+        position: relative;
+        .mx-sidenav__menu-link {
+            &::after {
+                content: "\f107";
+                font-family: "Line Awesome Free";
+                font-weight: 900;
+                margin-left: auto;
+                font-size: 14px;
+                transition: all .3s ease;
+            }
+        }
+        &.active {
+            .mx-sidenav__menu-link {
+                &::after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    &__sub {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+        &-item {
+            &:first-child {
+                .mx-sidenav__sub-link {
+                    border-radius: 5px 5px 0 0;
+                }
+            }
+            &:last-child {
+                .mx-sidenav__sub-link {
+                    border-radius: 0 0 5px 5px;
+                }
+            }
+        }
+        &-link {
+            display: flex;
+            align-items: center;
+            padding: 12px 30px;
+            color: rgba($white, .7);
+            background: darken($primary, 2%);
+            transition: all 0.3s ease;
+            &:hover {
+                color: $white;
+                background: darken($primary, 5%);
+            }
+            &.active-page {
+                background: darken($primary, 5%);
+            }
+        }
+        &-icon {
+            font-size: 24px;
+            line-height: 1;
+        }
+        &-text {
+            font-size: 14px;
+        }
+        &--hide {
+            display: none;
+        }
+        &-has-subset {
+            .mx-sidenav__sub-link {
+                &::after {
+                    content: "\f107";
+                    font-family: "Line Awesome Free";
+                    font-weight: 900;
+                    margin-left: auto;
+                    font-size: 14px;
+                    transition: all .3s ease;
+                }
+            }
+            &.active {
+                .mx-sidenav__sub-link {
+                    &::after {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}

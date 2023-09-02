@@ -1,0 +1,55 @@
+.login {
+    &-1 {
+        display: flex;
+        flex-direction: column;
+        min-height: 600px;
+        @include lg-screen {
+            flex-direction: row;
+            min-height: 100vh;
+        }
+        &__left {
+            flex-basis: 30%;
+            &-bg {
+                min-height: 360px;
+                width: 430px;
+                max-width: 100%;
+                background-size: cover;
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                @include md-screen {
+                    min-height: 560px;
+                    width: 440px;
+                }
+                &--1 {
+                    background-image: url(../img/login-img.png);
+                }
+                &--2 {
+                    background-image: url(../img/login-img-2.png);
+                    background-size: contain;
+                }
+            }
+        }
+        &__right {
+            background-image: url(../img/login-right-bg.png);
+            background-size: contain;
+            background-position: right center;
+            background-repeat: no-repeat;
+            flex: 1;
+            &-bg {
+                background-image: linear-gradient(-30deg, rgba($lota, .5), rgba($white, .5));
+            }
+        }
+    }
+    &__input {
+        border: 0;
+        background: transparent;
+        &:focus {
+            background: transparent;
+        }
+    }
+    &__label {
+        padding-left: 10px;
+        font-size: 12px;
+
+    }
+}

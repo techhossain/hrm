@@ -1,0 +1,8 @@
+.nice-select {
+    &--up {
+        .nice-select .list {
+            top: auto;
+            bottom: calc(100% + 5px);
+        }
+    }
+}

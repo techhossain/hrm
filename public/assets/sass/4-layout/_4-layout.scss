@@ -1,0 +1,11 @@
+/*---------------------------------------
+    4.1 Create Project
+-----------------------------------------*/
+.mx-create-project {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include xlii-screen {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}

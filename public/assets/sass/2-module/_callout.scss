@@ -1,0 +1,20 @@
+.mx-callout {
+    position: relative;
+    padding: 50px 15px;
+    @include md-screen {
+        padding: 50px 30px;
+    }
+    &__float-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 48px;
+        opacity: .1;
+    }
+    &--bg-1 {
+        background: rgba($delta, .1);
+    }
+    &--bg-2 {
+        background: rgba($lambda, .1);
+    }
+}

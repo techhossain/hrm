@@ -1,0 +1,12 @@
+.max-select {
+    .nice-select {
+        float: initial;
+        background: transparent;
+        border: none;
+        padding-left: 10px;
+        color: #495057;
+    }
+    .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+        background-color: rgba($lota, .5);
+    }
+}

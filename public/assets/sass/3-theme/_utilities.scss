@@ -1,0 +1,141 @@
+.t-link {
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+    &:focus {
+        outline: none;
+    }
+    &--alpha {
+        color: $heading-text;
+        &:hover {
+            color: $alpha;
+        }
+    }
+    &--light-alpha {
+        color: $white;
+        &:hover {
+            color: $alpha;
+        }
+    }
+    
+    &--primary {
+        color: $heading-text;
+        &:hover {
+            color: $gamma;
+        }
+        &.active {
+            color: $gamma;
+        }
+    }
+    // &-primary {
+    //     color: $primary;
+    //     &:hover {
+    //         color: $primary;
+    //     }
+    // }
+    // &-alpha {
+    //     color: $alpha;
+    //     &:hover {
+    //         color: $alpha;
+    //     }
+    // }
+    // &-beta {
+    //     color: $beta;
+    //     &:hover {
+    //         color: $beta;
+    //     }
+    // }
+    // &-gamma {
+    //     color: $gamma;
+    //     &:hover {
+    //         color: $gamma;
+    //     }
+    // }
+    // &-delta {
+    //     color: $delta;
+    //     &:hover {
+    //         color: $delta;
+    //     }
+    // }
+    // &-alpha {
+    //     color: $alpha;
+    //     &:hover {
+    //         color: $alpha;
+    //     }
+    // }
+    // &-alpha {
+    //     color: $alpha;
+    //     &:hover {
+    //         color: $alpha;
+    //     }
+    // }
+    // &--fb {
+    //     color: $fb;
+    //     &:hover {
+    //         color: $fb;
+    //     }
+    // }
+    // &--tw {
+    //     color: $tw;
+    //     &:hover {
+    //         color: $tw;
+    //     }
+    // }
+    // &--ins {
+    //     color: $ins;
+    //     &:hover {
+    //         color: $ins;
+    //     }
+    // }
+    // &--in {
+    //     color: $in;
+    //     &:hover {
+    //         color: $in;
+    //     }
+    // }
+    // &--be {
+    //     color: $be;
+    //     &:hover {
+    //         color: $be;
+    //     }
+    // }
+}
+// .t-img-gray {
+//     transition: all 0.3s ease;
+//     -webkit-filter: grayscale(100%);
+//     filter: grayscale(100%);
+//     &:hover {
+//         -webkit-filter: grayscale(0%);
+//         filter: grayscale(0%);
+//     }
+// }
+// .t-container {
+//     width: 1800px;
+//     max-width: 100%;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+.t-shadow {
+    box-shadow: 0 5px 15px rgba($dark, .08);
+}
+.font-weight-md {
+    font-weight: 500;
+}
+.t-width-max {
+    min-width: max-content;
+}
+.t-min-w-120 {
+    min-width: 120px;
+}
+.t-heading-font {
+    font-family: $heading-font;
+}
+.t-line-1 {
+    line-height: 1;
+}

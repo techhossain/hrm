@@ -1,0 +1,36 @@
+/* For the function */
+.msf {
+    &_hide {
+        display: none;
+    }
+    &_show {
+        display: block;
+    }
+    &_bullet_o {
+        display: done;
+        flex-flow: row wrap;
+    }
+    &__border {
+        border-width: 1px;
+        border-style: solid;
+        border-color: $color-4;
+    }
+}
+
+.msf_bullet_o > div {
+    height: 0;
+    width: 0;
+    margin: 0;
+    border-radius: 100px;
+    z-index: 2;
+}
+.msf_bullet {
+    position: relative;
+    background-color: $light-3;
+    &:first-child {
+        margin-left: 0;
+        &::before {
+            content: none;
+        }
+    }
+}

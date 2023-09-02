@@ -1,0 +1,137 @@
+.accordion {
+    &__button {
+        position: relative;
+        border-radius: 0;
+        background: $light;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        transition: all .3s ease;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &--primary {
+        .accordion__button {
+            &[aria-expanded="true"] {
+                color: $gamma;
+            }
+        }
+        &-bg {
+            .accordion__button {
+                &[aria-expanded="true"] {
+                    color: $light;
+                    background: $gamma;
+                }
+            }
+        }
+    }
+    &--secondary {
+        .accordion__button {
+            &[aria-expanded="true"] {
+                color: $secondary;
+            }
+        }
+        &-bg {
+            .accordion__button {
+                &[aria-expanded="true"] {
+                    color: $light;
+                    background: $secondary;
+                }
+            }
+        }
+    }
+    &--success {
+        .accordion__button {
+            &[aria-expanded="true"] {
+                color: $delta;
+            }
+        }
+        &-bg {
+            .accordion__button {
+                &[aria-expanded="true"] {
+                    color: $light;
+                    background: $delta;
+                }
+            }
+        }
+    }
+    &--warning {
+        .accordion__button {
+            &[aria-expanded="true"] {
+                color: $zeta;
+            }
+        }
+        &-bg {
+            .accordion__button {
+                &[aria-expanded="true"] {
+                    color: $light;
+                    background: $zeta;
+                }
+            }
+        }
+    }
+    &--danger {
+        .accordion__button {
+            &[aria-expanded="true"] {
+                color: $epsilon;
+            }
+        }
+        &-bg {
+            .accordion__button {
+                &[aria-expanded="true"] {
+                    color: $light;
+                    background: $epsilon;
+                }
+            }
+        }
+    }
+    &--info {
+        .accordion__button {
+            &[aria-expanded="true"] {
+                color: $eta;
+            }
+        }
+        &-bg {
+            .accordion__button {
+                &[aria-expanded="true"] {
+                    color: $light;
+                    background: $eta;
+                }
+            }
+        }
+    }
+    &--light {
+        .accordion__button {
+            &[aria-expanded="true"] {
+                color: $light;
+            }
+        }
+        &-bg {
+            .accordion__button {
+                &[aria-expanded="true"] {
+                    color: $dark;
+                    background: $light;
+                }
+            }
+        }
+    }
+    &--toggle-icon {
+        .accordion__button {
+            &::after {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
+                font-family: "Line Awesome Free";
+                font-weight: 900;
+            }
+            &[aria-expanded="true"]::after {
+                content: "\f106";
+            }
+            &[aria-expanded="false"]::after {
+                content: "\f107";
+            }
+        }
+    }
+}

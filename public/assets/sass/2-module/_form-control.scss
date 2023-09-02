@@ -1,0 +1,66 @@
+.form-control {
+    border-radius: 2px;
+    &--clear {
+        background: transparent;
+        &:focus {
+            background: transparent;
+        }
+    }
+    &--primary {
+        &:focus {
+            border: 1px solid rgba($gamma, 0.5);
+        }
+    }
+    &--beta {
+        background: $beta;
+        &:focus {
+            background: $beta;
+            outline: none;
+        }
+        &-dark {
+            background: darken($beta, 5%);
+            &:focus {
+                background: darken($beta, 5%);
+                outline: none;
+            }
+        }
+    }
+
+    &__select {
+        &-clear {
+            .nice-select {
+                background: transparent;
+            }
+            &-border {
+                .nice-select {
+                    border: none;
+                }
+                
+            }
+        }
+        &-primary {
+            .nice-select:active,
+            .nice-select.open,
+            .nice-select:focus {
+                border-color: $gamma;
+            }
+        }
+        &-beta {
+            .nice-select {
+                margin-bottom: 15px;
+                background: $beta;
+            }
+            .nice-select:active,
+            .nice-select.open,
+            .nice-select:focus {
+                background: $beta;
+            }
+        }
+        .nice-select {
+            border-radius: 2px;
+        }
+        .nice-select .list {
+            width: 100%;
+        }
+    }
+}

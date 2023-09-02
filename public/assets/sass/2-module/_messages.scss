@@ -1,0 +1,217 @@
+.dropdown-menu.messages-dropdown {
+    position: fixed !important;
+    top: 120px !important;
+    left: 0px !important;
+    transform: initial !important;
+    min-width: auto !important;
+    width: 768px;
+    max-width: 100%;
+    @include md-screen {
+        position: absolute !important;
+        top: 60px !important;
+        width: 350px;
+        max-width: 350px;
+    }
+    &.messages-dropdown--lg-right {
+        @include lg-screen {
+            left: auto !important;
+            right: 0;
+        }
+    }
+    &.messages-dropdown--mega-menu {
+        @include lg-screen {
+            width: 650px;
+            max-width: 650px;
+        }
+        @include xl-screen {
+            width: 850px;
+            max-width: 850px;
+        }
+    }
+    &.messages-dropdown--sm {
+        @include lg-screen {
+            width: 2550px;
+            max-width: 250px;
+        }
+        @include xl-screen {
+            width: 250px;
+            max-width: 250px;
+        }
+    }
+}
+
+.messages {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0 5px 15px rgba($dark, 0.3);
+    border-radius: 0 0 2px 2px;
+    &--dark {
+        background: $dark;
+        color: lighten($dark, 50%);
+        .messages__top-link {
+            color: lighten($dark, 50%);
+            &:hover {
+                color: $white;
+            }
+        }
+        .messages__author {
+            color: lighten($dark, 70%);
+        }
+        .messages__time {
+            color: lighten($dark, 50%);
+        }
+        .messages__preview {
+            color: lighten($dark, 60%);
+        }
+    }
+    &--primary {
+        background: darken($primary, 5%);
+        color: lighten($dark, 50%);
+        .mega-menu__title {
+            color: lighten($primary, 70%);
+        }
+        .mega-menu__link {
+            color: lighten($primary, 50%);
+        }
+        .messages__top-link {
+            color: lighten($primary, 50%);
+            &:hover {
+                color: $white;
+            }
+        }
+        .messages__author {
+            color: lighten($primary, 70%);
+        }
+        .messages__time {
+            color: lighten($primary, 50%);
+        }
+        .messages__preview {
+            color: lighten($primary, 60%);
+        }
+    }
+    &__top {
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(lighten($dark, 50%), 0.1);
+        &-text {
+            font-size: 13px;
+        }
+    }
+    &__body {
+        height: 300px;
+        position: relative;
+        @include xl-screen {
+            height: 200px;
+        }
+        .simplebar-content {
+            margin-right: 0 !important;
+            overflow-x: hidden;
+        }
+    }
+    &__avatar {
+        margin-right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        border-radius: 50%;
+        position: relative;
+        &-replacer {
+            font-size: 13px;
+            line-height: 1;
+            color: $white;
+            letter-spacing: 0.2em;
+        }
+        &-notification {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 2px solid $white;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            &--active {
+                background: $delta;
+            }
+            &--offline {
+                background: lighten($dark, 40%);
+            }
+        }
+        img {
+            border-radius: 50%;
+        }
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__author {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        font-weight: 500;
+    }
+    &__time {
+        display: block;
+        font-size: 12px;
+        letter-spacing: 0.03em;
+    }
+    &__preview {
+        display: block;
+        font-size: 12px;
+    }
+    &__status {
+        display: inline-block;
+        width: 8px;
+        min-width: 8px;
+        height: 8px;
+        min-height: 8px;
+        border-radius: 50%;
+        margin-left: 8px;
+        &--unseen {
+            background: $gamma;
+        }
+        &--seen {
+            background: lighten($dark, 30%);
+        }
+    }
+    &__msg {
+        display: flex;
+    }
+    &__content {
+        flex: 100;
+        &-body {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &__list {
+        &-item {
+            padding-bottom: 15px;
+            &:first-child {
+                padding-top: 15px;
+            }
+        }
+    }
+    &__footer {
+        padding-top: 15px;
+        border-top: 1px solid rgba(lighten($dark, 50%), 0.1);
+    }
+    &__view-all {
+        font-size: 13px;
+        color: $gamma;
+        &:hover {
+            color: $alpha;
+        }
+    }
+}

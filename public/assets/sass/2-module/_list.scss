@@ -1,0 +1,15 @@
+.t-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    &--row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

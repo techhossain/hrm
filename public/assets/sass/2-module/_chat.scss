@@ -1,0 +1,132 @@
+.chat {
+    @include md-screen {
+        display: flex;
+        align-items: flex-end;
+    }
+    &__left {
+        max-width: 100%;
+
+        @include md-screen {
+            width: 300px;
+            height: calc( 100vh - 356px);
+            min-height: 350;
+        }
+        @include xl-screen {
+            width: 350px;
+        }
+        &-wrapper {
+            border-radius: 5px;
+            @include md-screen {
+                margin-right: 8px;
+            }
+        }
+        .simplebar-content {
+            margin-right: 0 !important;
+        }
+    }
+    &__nav {
+        height: 100%;
+    }
+    &__head {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-right: 17px;
+        padding-left: 17px;
+        border-radius: 5px 5px 0 0;
+    }
+    &__search {
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+        border: 1px solid $border;
+        border-radius: 50px;
+        &-input {
+            flex: 1;
+            padding-left: 10px;
+            border: none;
+            background: transparent;
+            color: $heading-text;
+        }
+        &-icon {
+            font-size: 20px;
+            color: $heading-text;
+        }
+    }
+    &__box {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 15px;
+        padding-bottom: 30px;
+        width: calc(100vw - 50px);
+        overflow-x: scroll;
+        @include md-screen {
+            width: 100%;
+            overflow-x: hidden;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    &__list {
+        display: flex;
+        @include md-screen {
+            flex-direction: column;
+        }
+        &-item {
+            margin-right: 10px;
+            @include md-screen {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .messages__author {
+                color: $dark;
+            }
+            .messages__content {
+                display: none;
+                @include md-screen {
+                    display: block;
+                }
+            }
+            .messages__preview {
+                color: lighten($dark, 30%);
+            }
+            .messages__time {
+                color: lighten($dark, 30%);
+            }
+        }
+    }
+    &__right {
+        margin-top: 30px;
+        @include md-screen {
+            margin-top: 0;
+            margin-left: 8px;
+            flex: 1;
+        }
+        &-head {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            .messages__author {
+                color: $dark;
+            }
+            .messages__preview {
+                color: lighten($dark, 30%);
+            }
+            .messages__time {
+                color: lighten($dark, 30%);
+            }
+        }
+        &-main {
+            min-height: 350px;
+            height: calc(100vh - 379px);
+            .simplebar-content {
+                overflow-x: hidden;
+                margin-right: 0 !important;
+            }
+        }
+
+    }
+}

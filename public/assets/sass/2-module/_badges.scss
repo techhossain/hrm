@@ -1,0 +1,209 @@
+.badges {
+    display: inline-block;
+    position: relative;
+    transition: all .3s ease;
+    line-height: 1;
+    letter-spacing: .1em;
+    &:hover {
+        text-decoration: none;
+    }
+    &-rounded {
+        border-radius: 10rem;
+    }
+    &-sm {
+        padding: 4px 8px;
+        font-size: 65%;
+    }
+    &-md {
+        padding: 4px 10px;
+        font-size: 75%;
+    }
+    &-lg {
+        padding: 5px 10px;
+        font-size: 85%;
+    }
+    &-primary {
+        background: $gamma;
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+        &-half {
+            color: $gamma;
+            background: rgba($gamma, .1);
+            &:hover {
+                color: $white;
+                background: $gamma;
+            }
+        }
+    }
+    &-success {
+        background: $delta;
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+        &-half {
+            color: $delta;
+            background: rgba($delta, .1);
+            &:hover {
+                color: $white;
+                background: $delta;
+            }
+        }
+    }
+    &-secondary {
+        background: $secondary;
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+        &-half {
+            color: $secondary;
+            background: rgba($secondary, .1);
+            &:hover {
+                color: $white;
+                background: $secondary;
+            }
+        }
+    }
+    &-warning {
+        background: $zeta;
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+        &-half {
+            color: $zeta;
+            background: rgba($zeta, .1);
+            &:hover {
+                color: $white;
+                background: $zeta;
+            }
+        }
+    }
+    &-danger {
+        background: $epsilon;
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+        &-half {
+            color: $epsilon;
+            background: rgba($epsilon, .1);
+            &:hover {
+                color: $white;
+                background: $epsilon;
+            }
+        }
+    }
+    &-info {
+        background: $eta;
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+        &-half {
+            color: $eta;
+            background: rgba($eta, .1);
+            &:hover {
+                color: $white;
+                background: $eta;
+            }
+        }
+    }
+    &-light {
+        background: $light-3;
+        color: $dark;
+        &:hover {
+            color: $dark;
+        }
+        &-half {
+            color: $dark;
+            background: rgba($light-3, .5);
+            &:hover {
+                color: $dark;
+                background: $light-3;
+            }
+        }
+    }
+    &-dark {
+        background: $heading-text;
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+        &-half {
+            color: $dark;
+            background: rgba($heading-text, .1);
+            &:hover {
+                color: $white;
+                background: $heading-text;
+            }
+        }
+    }
+    &-outline-primary {
+        border: 1px solid rgba($gamma, .5);
+        background: transparent;
+        color: $gamma;
+        &:hover {
+            color: $gamma;
+        }
+    }
+    &-outline-success {
+        border: 1px solid rgba($delta, .5);
+        background: transparent;
+        color: $delta;
+        &:hover {
+            color: $delta;
+        }
+    }
+    &-outline-secondary {
+        border: 1px solid rgba($secondary, .5);
+        background: transparent;
+        color: $secondary;
+        &:hover {
+            color: $secondary;
+        }
+    }
+    &-outline-warning {
+        border: 1px solid rgba($zeta, .5);
+        background: transparent;
+        color: $zeta;
+        &:hover {
+            color: $zeta;
+        }
+    }
+    &-outline-danger {
+        border: 1px solid rgba($epsilon, .5);
+        background: transparent;
+        color: $epsilon;
+        &:hover {
+            color: $epsilon;
+        }
+    }
+    &-outline-info {
+        border: 1px solid rgba($eta, .5);
+        background: transparent;
+        color: $eta;
+        &:hover {
+            color: $eta;
+        }
+    }
+    &-outline-light {
+        border: 1px solid rgba($light-3, 1);
+        background: transparent;
+        color: $light-3;
+        &:hover {
+            color: $light-3;
+        }
+    }
+    &-outline-dark {
+        border: 1px solid rgba($heading-text, .5);
+        background: transparent;
+        color: $heading-text;
+        &:hover {
+            color: $heading-text;
+        }
+    }
+}

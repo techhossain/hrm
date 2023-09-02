@@ -1,0 +1,49 @@
+.mx-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--round {
+        border-radius: 3px;
+    }
+    &--sm {
+        width: 30px;
+        min-width: 30px;
+        min-height: 30px;
+        height: 30px;
+        line-height: 1;
+    }
+    &--md {
+        width: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        height: 40px;
+        line-height: 1;
+    }
+    &--lg {
+        width: 50px;
+        min-width: 50px;
+        min-height: 50px;
+        height: 50px;
+        line-height: 1;
+    }
+    &--light-primary {
+        background: rgba($gamma, .3);
+        color: $gamma;
+    }
+    &--light-secondary {
+        background: rgba($secondary, .3);
+        color: $secondary;
+    }
+    &--light-success {
+        background: rgba($delta, .3);
+        color: $delta;
+    }
+    &--light-danger {
+        background: rgba($epsilon, .3);
+        color: $epsilon;
+    }
+    &--light-warning {
+        background: rgba($zeta, .3);
+        color: $zeta;
+    }
+}

@@ -1,0 +1,50 @@
+.mx-mail-box {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    &--height {
+        @include lg-screen {
+            height: calc(100vh - 326px);
+        }
+    }
+    &__link {
+        width: 100%;
+        display: flex !important;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        @include xl-screen {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        @include xliv-screen {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        &:hover {
+            background: $color-2;
+            .mx-mail-box__badge {
+                background: $gamma;
+            }
+        }
+        &.active {
+            background: $color-2;
+            .mx-mail-box__badge {
+                background: $gamma;
+            }
+        }
+    }
+    &__icon {
+        margin-right: 15px;
+        color: $light-4;
+        font-size: 18px;
+        line-height: 1;
+    }
+    &__badge {
+        background: $light-4;
+        color: $white;
+        min-width: 30px;
+        text-align: center;
+    }
+}

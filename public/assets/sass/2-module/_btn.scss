@@ -1,0 +1,487 @@
+.btn {
+    letter-spacing: 0.05em;
+    border-radius: 2px;
+}
+.btn-success {
+    color: $white;
+    background-color: $delta;
+    border-color: $delta;
+    &:hover {
+        background-color: darken($delta, 5%);
+        border-color: darken($delta, 5%);
+    }
+    &.btn-transparent {
+        color: darken($delta, 8%);
+        background-color: lighten($delta, 42%);
+        border-color: lighten($delta, 42%);
+        &:hover {
+            color: $white;
+            background-color: $delta;
+            border-color: $delta;
+        }
+    }
+    &-dark {
+        background-color: darken($delta, 5%);
+    }
+}
+.btn-success:not(:disabled):not(.disabled):active,
+.btn-success:not(:disabled):not(.disabled).active,
+.show > .btn-success.dropdown-toggle {
+    color: #fff;
+    background-color: darken($delta, 5%);
+    border-color: darken($delta, 5%);
+}
+.btn-success:not(:disabled):not(.disabled):active,
+.btn-success:not(:disabled):not(.disabled).active,
+.show > .btn-success.dropdown-toggle {
+    color: #fff;
+    background-color: darken($delta, 5%);
+    border-color: darken($delta, 5%);
+}
+
+.btn-danger {
+    color: $white;
+    background-color: $epsilon;
+    border-color: $epsilon;
+    &:hover {
+        background-color: darken($epsilon, 5%);
+        border-color: darken($epsilon, 5%);
+    }
+    &.btn-transparent {
+        color: darken($epsilon, 5%);
+        background-color: lighten($epsilon, 30%);
+        border-color: lighten($epsilon, 30%);
+        &:hover {
+            color: $white;
+            background-color: $epsilon;
+            border-color: $epsilon;
+        }
+    }
+    &-dark {
+        background-color: darken($epsilon, 5%);
+    }
+}
+.btn-danger:not(:disabled):not(.disabled):active,
+.btn-danger:not(:disabled):not(.disabled).active,
+.show > .btn-danger.dropdown-toggle {
+    color: #fff;
+    background-color: darken($epsilon, 5%);
+    border-color: darken($epsilon, 5%);
+}
+.btn-danger:not(:disabled):not(.disabled):active,
+.btn-danger:not(:disabled):not(.disabled).active,
+.show > .btn-danger.dropdown-toggle {
+    color: #fff;
+    background-color: darken($epsilon, 5%);
+    border-color: darken($epsilon, 5%);
+}
+
+.btn-warning {
+    color: $white;
+    background-color: $lambda;
+    border-color: $lambda;
+    &:hover {
+        color: $white;
+        background-color: darken($lambda, 5%);
+        border-color: darken($lambda, 5%);
+    }
+    &.btn-transparent {
+        color: darken($lambda, 8%);
+        background-color: lighten($lambda, 25%);
+        border-color: lighten($lambda, 30%);
+        &:hover {
+            color: $white;
+            background-color: $lambda;
+            border-color: $lambda;
+        }
+    }
+    &-dark {
+        background-color: darken($lambda, 5%);
+    }
+}
+.btn-warning:not(:disabled):not(.disabled):active,
+.btn-warning:not(:disabled):not(.disabled).active,
+.show > .btn-warning.dropdown-toggle {
+    color: #fff;
+    background-color: darken($zeta, 5%);
+    border-color: darken($zeta, 5%);
+}
+.btn-warning:not(:disabled):not(.disabled):active,
+.btn-warning:not(:disabled):not(.disabled).active,
+.show > .btn-warning.dropdown-toggle {
+    color: #fff;
+    background-color: darken($zeta, 5%);
+    border-color: darken($zeta, 5%);
+}
+
+.btn-secondary {
+    color: $white;
+    background-color: $secondary;
+    border-color: $secondary;
+    &:hover {
+        background-color: darken($secondary, 5%);
+        border-color: darken($secondary, 5%);
+    }
+    &.btn-transparent {
+        color: darken($secondary, 5%);
+        background-color: lighten($secondary, 40%);
+        border-color: lighten($secondary, 40%);
+        &:hover {
+            color: $white;
+            background-color: $secondary;
+            border-color: $secondary;
+        }
+    }
+    &-dark {
+        background-color: darken($secondary, 5%);
+    }
+}
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: darken($secondary, 5%);
+    border-color: darken($secondary, 5%);
+}
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: darken($secondary, 5%);
+    border-color: darken($secondary, 5%);
+}
+
+.btn-primary {
+    color: $white;
+    background-color: $gamma;
+    border-color: $gamma;
+    &:hover {
+        background-color: darken($gamma, 5%);
+        border-color: darken($gamma, 5%);
+    }
+    &.btn-transparent {
+        color: darken($gamma, 5%);
+        background-color: lighten($gamma, 30%);
+        border-color: lighten($gamma, 30%);
+        &:hover {
+            color: $white;
+            background-color: $gamma;
+            border-color: $gamma;
+        }
+    }
+    &-dark {
+        background-color: darken($gamma, 5%);
+    }
+}
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: darken($gamma, 5%);
+    border-color: darken($gamma, 5%);
+}
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: darken($gamma, 5%);
+    border-color: darken($gamma, 5%);
+}
+
+.btn-info {
+    color: $white;
+    background-color: $eta;
+    border-color: $eta;
+    &:hover {
+        background-color: darken($eta, 5%);
+        border-color: darken($eta, 5%);
+    }
+    &.btn-transparent {
+        color: darken($eta, 5%);
+        background-color: lighten($eta, 45%);
+        border-color: lighten($eta, 45%);
+        &:hover {
+            color: $white;
+            background-color: $eta;
+            border-color: $eta;
+        }
+    }
+    .dark {
+        background-color: darken($eta, 5%);
+    }
+}
+.btn-info:not(:disabled):not(.disabled):active,
+.btn-info:not(:disabled):not(.disabled).active,
+.show > .btn-info.dropdown-toggle {
+    color: #fff;
+    background-color: darken($eta, 5%);
+    border-color: darken($eta, 5%);
+}
+.btn-info:not(:disabled):not(.disabled):active,
+.btn-info:not(:disabled):not(.disabled).active,
+.show > .btn-info.dropdown-toggle {
+    color: #fff;
+    background-color: darken($eta, 5%);
+    border-color: darken($eta, 5%);
+}
+
+.btn-dark {
+    color: $white;
+    background-color: $dark;
+    border-color: $dark;
+    &:hover {
+        background-color: darken($dark, 5%);
+        border-color: darken($dark, 5%);
+    }
+    &.btn-transparent {
+        color: darken($dark, 5%);
+        background-color: lighten($dark, 70%);
+        border-color: lighten($dark, 70%);
+        &:hover {
+            color: $white;
+            background-color: $dark;
+            border-color: $dark;
+        }
+    }
+    &-dark {
+        background-color: darken($dark, 5%);
+    }
+}
+.btn-info:not(:disabled):not(.disabled):active,
+.btn-info:not(:disabled):not(.disabled).active,
+.show > .btn-info.dropdown-toggle {
+    color: #fff;
+    background-color: darken($eta, 5%);
+    border-color: darken($eta, 5%);
+}
+.btn-info:not(:disabled):not(.disabled):active,
+.btn-info:not(:disabled):not(.disabled).active,
+.show > .btn-info.dropdown-toggle {
+    color: #fff;
+    background-color: darken($eta, 5%);
+    border-color: darken($eta, 5%);
+}
+
+.btn-light {
+    color: lighten($dark, 10%);
+    background-color: darken($beta, 4%);
+    border-color: darken($beta, 4%);
+    &:hover {
+        color: darken($dark, 10%);
+        background-color: darken(darken($beta, 4%), 5%);
+        border-color: darken(darken($beta, 4%), 5%);
+    }
+    &.btn-transparent {
+        color: lighten($dark, 10%);
+        background-color: lighten(darken($beta, 4%), 2%);
+        border-color: lighten(darken($beta, 4%), 2%);
+        &:hover {
+            color: darken($dark, 10%);
+            background-color: darken($beta, 4%);
+            border-color: darken($beta, 4%);
+        }
+    }
+    &-dark {
+        background-color: darken(darken($beta, 4%), 5%);
+    }
+}
+.btn-light:not(:disabled):not(.disabled):active,
+.btn-light:not(:disabled):not(.disabled).active,
+.show > .btn-light.dropdown-toggle {
+    color: lighten($dark, 10%);
+    background-color: darken(darken($beta, 4%), 5%);
+    border-color: darken(darken($beta, 4%), 5%);
+}
+.btn-light:not(:disabled):not(.disabled):active,
+.btn-light:not(:disabled):not(.disabled).active,
+.show > .btn-light.dropdown-toggle {
+    color: lighten($dark, 10%);
+    background-color: darken(darken($beta, 4%), 5%);
+    border-color: darken(darken($beta, 4%), 5%);
+}
+
+// Outline Button
+.btn-outline-success {
+    color: $delta;
+    border-color: $delta;
+    &:hover {
+        color: $white;
+        background-color: darken($delta, 5%);
+        border-color: darken($delta, 5%);
+    }
+}
+.btn-outline-success:not(:disabled):not(.disabled):active,
+.btn-outline-success:not(:disabled):not(.disabled).active,
+.show > .btn-outline-success.dropdown-toggle {
+    color: #fff;
+    background-color: darken($delta, 5%);
+    border-color: darken($delta, 5%);
+}
+.btn-outline-success:not(:disabled):not(.disabled):active,
+.btn-outline-success:not(:disabled):not(.disabled).active,
+.show > .btn-outline-success.dropdown-toggle {
+    color: #fff;
+    background-color: darken($delta, 5%);
+    border-color: darken($delta, 5%);
+}
+
+.btn-outline-danger {
+    color: $epsilon;
+    border-color: $epsilon;
+    &:hover {
+        background-color: darken($epsilon, 5%);
+        border-color: darken($epsilon, 5%);
+    }
+}
+.btn-outline-danger:not(:disabled):not(.disabled):active,
+.btn-outline-danger:not(:disabled):not(.disabled).active,
+.show > .btn-outline-danger.dropdown-toggle {
+    color: #fff;
+    background-color: darken($epsilon, 5%);
+    border-color: darken($epsilon, 5%);
+}
+.btn-outline-danger:not(:disabled):not(.disabled):active,
+.btn-outline-danger:not(:disabled):not(.disabled).active,
+.show > .btn-outline-danger.dropdown-toggle {
+    color: #fff;
+    background-color: darken($epsilon, 5%);
+    border-color: darken($epsilon, 5%);
+}
+
+.btn-outline-warning {
+    color: $zeta;
+    border-color: $zeta;
+    &:hover {
+        color: $white;
+        background-color: darken($zeta, 5%);
+        border-color: darken($zeta, 5%);
+    }
+}
+.btn-outline-warning:not(:disabled):not(.disabled):active,
+.btn-outline-warning:not(:disabled):not(.disabled).active,
+.show > .btn-outline-warning.dropdown-toggle {
+    color: #fff;
+    background-color: darken($zeta, 5%);
+    border-color: darken($zeta, 5%);
+}
+.btn-outline-warning:not(:disabled):not(.disabled):active,
+.btn-outline-warning:not(:disabled):not(.disabled).active,
+.show > .btn-outline-warning.dropdown-toggle {
+    color: #fff;
+    background-color: darken($zeta, 5%);
+    border-color: darken($zeta, 5%);
+}
+
+.btn-outline-secondary {
+    color: $secondary;
+    border-color: $secondary;
+    &:hover {
+        background-color: darken($secondary, 5%);
+        border-color: darken($secondary, 5%);
+    }
+}
+.btn-outline-secondary:not(:disabled):not(.disabled):active,
+.btn-outline-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: darken($secondary, 5%);
+    border-color: darken($secondary, 5%);
+}
+.btn-outline-secondary:not(:disabled):not(.disabled):active,
+.btn-outline-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: darken($secondary, 5%);
+    border-color: darken($secondary, 5%);
+}
+
+.btn-outline-primary {
+    color: $gamma;
+    border-color: $gamma;
+    &:hover {
+        background-color: darken($gamma, 5%);
+        border-color: darken($gamma, 5%);
+    }
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: darken($gamma, 5%);
+    border-color: darken($gamma, 5%);
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: darken($gamma, 5%);
+    border-color: darken($gamma, 5%);
+}
+
+.btn-outline-info {
+    color: $eta;
+    border-color: $eta;
+    &:hover {
+        background-color: darken($eta, 5%);
+        border-color: darken($eta, 5%);
+    }
+}
+.btn-outline-info:not(:disabled):not(.disabled):active,
+.btn-outline-info:not(:disabled):not(.disabled).active,
+.show > .btn-outline-info.dropdown-toggle {
+    color: #fff;
+    background-color: darken($eta, 5%);
+    border-color: darken($eta, 5%);
+}
+.btn-outline-info:not(:disabled):not(.disabled):active,
+.btn-outline-info:not(:disabled):not(.disabled).active,
+.show > .btn-outline-info.dropdown-toggle {
+    color: #fff;
+    background-color: darken($eta, 5%);
+    border-color: darken($eta, 5%);
+}
+
+.btn-outline-light {
+    border-color: lighten($dark, 70%);
+    color: lighten($dark, 70%);
+    &:hover {
+        color: $white;
+        background-color: darken(lighten($dark, 70%), 5%);
+        border-color: darken(lighten($dark, 70%), 5%);
+    }
+}
+.btn-outline-light:not(:disabled):not(.disabled):active,
+.btn-outline-light:not(:disabled):not(.disabled).active,
+.show > .btn-outline-light.dropdown-toggle {
+    color: $dark;
+    background-color: darken(lighten($dark, 70%), 5%);
+    border-color: darken(lighten($dark, 70%), 5%);
+}
+.btn-outline-light:not(:disabled):not(.disabled):active,
+.btn-outline-light:not(:disabled):not(.disabled).active,
+.show > .btn-outline-light.dropdown-toggle {
+    color: $dark;
+    background-color: darken(lighten($dark, 70%), 5%);
+    border-color: darken(lighten($dark, 70%), 5%);
+}
+
+.btn-cs-light {
+    color: $heading-text;
+    background: $white;
+    border: 1px solid $white;
+    &:hover {
+        border: 1px solid $gamma;
+        background: $gamma;
+        color: $white;
+    }
+    &.active {
+        border: 1px solid $gamma;
+        background: $gamma;
+        color: $white;
+    }
+}
+.btn-min-width {
+    min-width: 150px;
+    font-weight: 500;
+    letter-spacing: .1em;
+}

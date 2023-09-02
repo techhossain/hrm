@@ -1,0 +1,66 @@
+.paginav {
+    &__link {
+        &--light {
+            color: $heading-text;
+            &:hover {
+                color: $gamma;
+                background: $light-3;
+            }
+            &.active {
+                background: $light-3;
+            }
+        }
+        &--primary {
+            color: $gamma;
+            &:hover {
+                border: 1px solid $gamma !important;
+                color: $white;
+                background: $gamma;
+            }
+            &.active {
+                border: 1px solid $gamma !important;
+                color: $white;
+                background: $gamma;
+            }
+        }
+        &--success {
+            color: $delta;
+            &:hover {
+                border: 1px solid $delta !important;
+                color: $white;
+                background: $delta;
+            }
+            &.active {
+                border: 1px solid $delta !important;
+                color: $white;
+                background: $delta;
+            }
+        }
+        &--secondary {
+            color: $secondary;
+            &:hover {
+                border: 1px solid $secondary !important;
+                color: $white;
+                background: $secondary;
+            }
+            &.active {
+                border: 1px solid $secondary !important;
+                color: $white;
+                background: $secondary;
+            }
+        }
+        &--danger {
+            color: $epsilon;
+            &:hover {
+                border: 1px solid $epsilon !important;
+                color: $white;
+                background: $epsilon;
+            }
+            &.active {
+                border: 1px solid $epsilon !important;
+                color: $white;
+                background: $epsilon;
+            }
+        }
+    }
+}

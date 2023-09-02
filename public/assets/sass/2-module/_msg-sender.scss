@@ -1,0 +1,29 @@
+.msg-sender {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        &-item {
+            overflow: hidden;
+            margin-bottom: 3px;
+            font-size: 14px;
+            color: $white;
+            &:first-child {
+                .msg-sender__message {
+                    border-radius: 50px 50px 15px 50px;
+                }
+            }
+            &:last-child {
+                
+                .msg-sender__message {
+                    border-radius: 50px 15px 50px 50px;
+                }
+            }
+        }
+    }
+    &__message {
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: 50px 15px 15px 50px;
+        background: $secondary;
+    }
+}

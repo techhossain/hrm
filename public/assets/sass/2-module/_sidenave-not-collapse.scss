@@ -1,0 +1,26 @@
+.mx-sidenav-not-collapsed {
+    .mx-body {
+        height: calc(100vh - 58px);
+        @include xl-screen {
+            height: 100vh;
+        }
+        &__content {
+            background: $color-16;
+            @include xl-screen {
+                height: calc(100vh - 115px);
+                border-radius: 0 0 0 25px;
+            }
+        }
+    }
+    .mx-sidenav__menu-container {
+        height: calc(100vh - 75px);
+        overflow-y: scroll;
+        margin-right: -17px !important;
+        margin-bottom: -17px !important;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+            background: transparent;
+        }
+    }
+}

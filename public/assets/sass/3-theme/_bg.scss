@@ -1,0 +1,81 @@
+.t-bg-primary {
+    background: $primary;
+    &-half {
+        background: rgba($primary, .5);
+    }
+}
+.t-bg-secondary {
+    background: $secondary;
+    &-half {
+        background: rgba($secondary, .4);
+    }
+}
+.t-bg-white {
+    background: $white;
+}
+.t-bg-light {
+    background: $light;
+}
+.t-bg-light-2 {
+    background: $light-2;
+}
+.t-bg-light-3 {
+    background: $light-3;
+}
+.t-bg-dark {
+    background: $dark;
+}
+.t-bg-beta {
+    background: $beta;
+}
+.t-bg-zeta {
+    background: $zeta;
+    &-half {
+        background: rgba($zeta, .4);
+    }
+}
+.t-bg-gamma {
+    background: $gamma;
+    &-half {
+        background: rgba($gamma, .4);
+    }
+}
+.t-bg-epsilon {
+    background: $epsilon;
+    &-half {
+        background: rgba($epsilon, .4);
+    }
+}
+.t-bg-delta {
+    background: $delta;
+    &-half {
+        background: rgba($delta, .4);
+    }
+}
+.t-bg-alpha {
+    background: $alpha;
+    &-half {
+        background: rgba($alpha, .5);
+    }
+}
+.t-bg-lambda {
+    background: $lambda;
+}
+.t-bg-theta {
+    background: $theta;
+}
+.t-bg-kappa {
+    background: $kappa;
+}
+.t-bg-clear {
+    background: transparent;
+}
+.t-bg-color-5 {
+    background: $color-5;
+}
+.t-bg-16 {
+    background: $color-16;
+}
+.t-bg-17 {
+    background: $color-17;
+}

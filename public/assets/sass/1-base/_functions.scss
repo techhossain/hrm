@@ -1,0 +1,6 @@
+@function rem($value) {
+    @return unquote(($value/1px)/16+"rem");
+}
+@function hexToRGB($hex) {
+    @return red($hex), green($hex), blue($hex);
+}

@@ -1,0 +1,150 @@
+.kanban-container {
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+}
+.kanban-container .kanban-board {
+    // width: 100%!important;
+    float: none;
+    flex-shrink: 0;
+    margin-bottom: 1.25rem;
+    background-color: $color-3;
+    border-radius: 0.42rem;
+    @include md-screen {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+    }
+}
+.kanban-container .kanban-board .kanban-board-header .kanban-title-board {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.kanban-container .kanban-board .kanban-board-header {
+    border-top-left-radius: 0.42rem;
+    border-top-right-radius: 0.42rem;
+    letter-spacing: 0.02em;
+}
+.kanban-container .kanban-board .kanban-drag .kanban-item {
+    border-radius: 0.42rem;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+}
+.kanban-board[data-id="mx_inprocess-2"] {
+    .kanban-board-header {
+        background: $secondary;
+        color: $white;
+    }
+    .kanban-item {
+        background: rgba($secondary, 0.1);
+        color: $secondary;
+        box-shadow: none !important;
+    }
+}
+.kanban-board[data-id="mx_working-2"] {
+    .kanban-board-header {
+        background: $eta;
+        color: $white;
+    }
+    .kanban-item {
+        background: rgba($eta, 0.1);
+        color: $eta;
+        box-shadow: none !important;
+    }
+}
+.kanban-board[data-id="mx_done-2"] {
+    .kanban-board-header {
+        background: $epsilon;
+        color: $white;
+    }
+    .kanban-item {
+        background: rgba($epsilon, 0.1);
+        color: $epsilon;
+        box-shadow: none !important;
+    }
+}
+.kanban-board[data-id="mx_inprocess-3"] {
+    background: rgba($secondary, 0.1);
+    .kanban-board-header {
+        background: $secondary;
+        color: $white;
+    }
+    
+}
+.kanban-board[data-id="mx_working-3"] {
+    background: rgba($eta, 0.1);
+    .kanban-board-header {
+        background: $eta;
+        color: $white;
+    }
+    
+}
+.kanban-board[data-id="mx_done-3"] {
+    background: rgba($epsilon, 0.1);
+    .kanban-board-header {
+        background: $epsilon;
+        color: $white;
+    }
+    
+}
+.kanban-board[data-id="mx_inprocess-4"] {
+    background: rgba($secondary, 0.1);
+    .kanban-board-header {
+        background: rgba($secondary, 0.3);
+        color: $secondary;
+    }
+    
+    .kanban-item {
+        background: $secondary;
+        color: $white;
+    }
+}
+.kanban-board[data-id="mx_working-4"] {
+    background: rgba($eta, 0.1);
+    .kanban-board-header {
+        background: rgba($eta, 0.3);
+        color: $eta;
+    }
+   
+    .kanban-item {
+        background: $eta;
+        color: $white;
+    }
+}
+.kanban-board[data-id="mx_done-4"] {
+    background: rgba($epsilon, 0.1);
+    .kanban-board-header {
+        background: rgba($epsilon, 0.3);
+        color: $epsilon;
+    }
+    
+    .kanban-item {
+        background: $epsilon;
+        color: $white;
+    }
+}
+.kanban-board[data-id="mx_inprocess-6"] {
+    background: rgba($secondary, 0.3);
+    .kanban-board-header {
+        background: $secondary;
+        color: $white;
+    }
+    
+}
+.kanban-board[data-id="mx_working-6"] {
+    background: rgba($eta, 0.3);
+    .kanban-board-header {
+        background: $eta;
+        color: $white;
+    }
+   
+   
+}
+.kanban-board[data-id="mx_done-6"] {
+    background: rgba($epsilon, 0.3);
+    .kanban-board-header {
+        background: $epsilon;
+        color: $white;
+    }
+    
+    
+}

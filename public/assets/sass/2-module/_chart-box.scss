@@ -1,0 +1,15 @@
+.mx-chart-box {
+    padding: 30px;
+    position: relative;
+    &_price-up {
+        transform: rotate(45deg);
+    }
+    &_price-down {
+        transform: rotate(135deg);
+    }
+    &__icon {
+        position: absolute;
+        left: 30px;
+        top: 25px;
+    }
+}

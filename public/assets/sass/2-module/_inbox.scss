@@ -1,0 +1,14 @@
+.mx-inbox {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    @include xl-screen {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @include xliv-screen {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

@@ -1,0 +1,14 @@
+.mx-project-card {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include xliv-screen {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    &__head {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

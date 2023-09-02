@@ -1,0 +1,62 @@
+.dropzone {
+    &--primary {
+        max-width: 100%;
+        border: 2px dashed rgba($gamma, .5);
+        .dropzone-icon {
+            color: rgba($alpha, .8);
+            transition: all .3s ease;
+            &:hover {
+                color: darken($alpha, 5%);
+            }
+        }
+        &-bg {
+            background: rgba($alpha, .15);
+        }
+    }
+    &--success {
+        max-width: 100%;
+        border: 2px dashed rgba($delta, .5);
+        .dropzone-icon {
+            color: rgba($delta, .8);
+            transition: all .3s ease;
+            &:hover {
+                color: darken($delta, 5%);
+            }
+        }
+        &-bg {
+            background: rgba($delta, .15);
+        }
+    }
+    &--warning {
+        max-width: 100%;
+        border: 2px dashed rgba($zeta, .5);
+        .dropzone-icon {
+            color: rgba($zeta, .8);
+            transition: all .3s ease;
+            &:hover {
+                color: darken($zeta, 5%);
+            }
+        }
+        &-bg {
+            background: rgba($zeta, .15);
+        }
+    }
+    &--danger {
+        max-width: 100%;
+        border: 2px dashed rgba($epsilon, .5);
+        .dropzone-icon {
+            color: rgba($epsilon, .8);
+            transition: all .3s ease;
+            &:hover {
+                color: darken($epsilon, 5%);
+            }
+        }
+        &-bg {
+            background: rgba($epsilon, .15);
+        }
+    }
+    &-icon {
+        font-size: 50px;
+        line-height: 1;
+    }
+}

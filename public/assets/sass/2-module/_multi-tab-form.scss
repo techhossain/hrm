@@ -1,0 +1,7 @@
+.tabs-panels.active {
+    display: block;
+  }
+  .tabs-panels {
+    display: none;
+    animation: fadeIn .4s ease;
+  }

@@ -1,0 +1,46 @@
+.mx-report-card {
+    &__text {
+        font-family: $heading-font;
+        font-weight: 600;
+    }
+    &__sub-text {
+        font-family: $heading-font;
+        font-weight: 400;
+    }
+    &-1 {
+        background: linear-gradient(132deg, $color-7, $color-6);
+        box-shadow: 0 10px 20px rgba($color-8, 0.2);
+        &+.mx-report-card__icon {
+            color: $color-9;
+        }
+    }
+    &-2 {
+        background: linear-gradient(132deg, $color-11, $color-10);
+        box-shadow: 0 10px 20px rgba($color-10, 0.2);
+        &+.mx-report-card__icon {
+            color: $color-10;
+        }
+    }
+    &-3 {
+        background: linear-gradient(132deg, $color-12, $color-13);
+        box-shadow: 0 10px 20px rgba($color-12, 0.2);
+        &+.mx-report-card__icon {
+            color: $color-12;
+        }
+    }
+    &-4 {
+        background: linear-gradient(132deg, $color-14, $color-15);
+        box-shadow: 0 10px 20px rgba($color-14, 0.2);
+        &+.mx-report-card__icon {
+            color: $color-14;
+        }
+    }
+    &__icon {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 40px;
+        line-height: 1;
+        opacity: 0.1;
+    }
+}

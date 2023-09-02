@@ -1,0 +1,42 @@
+.mx-task-complete {
+    display: flex;
+    align-items: center;
+    &:hover {
+        .mx-task-complete__date::after {
+            border: 2px solid $epsilon;
+        }
+    }
+    &-container {
+        position: relative;
+        &::before {
+            content: '';
+            width: 2px;
+            height: calc(100% - 30px);
+            position: absolute;
+            left: 99px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: $border;
+        }
+    }
+    &__date {
+        width: 120px;
+        min-width: 120px;
+        position: relative;
+        &::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: $white;
+            border: 2px solid $gamma;
+            box-shadow: 0 0 0 2px $white;
+            transition: all .3s ease;
+        }
+        
+    }
+}

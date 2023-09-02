@@ -1,0 +1,31 @@
+.id-card {
+    padding: 30px 15px;
+    position: relative;
+    @include sm-screen {
+        padding: 40px 30px;
+    }
+    @include xliv-screen {
+        padding: 40px 40px;
+    }
+    &__number {
+        position: absolute;
+        top: -15px;
+        right: 10px;
+        font-family: $heading-font;
+        font-size: 70px;
+        font-weight: 700;
+        opacity: .2;
+        &--warning {
+            color: $zeta;
+        }
+        &--success {
+            color: $delta;
+        }
+        &--primary {
+            color: $gamma;
+        }
+    }
+    &__icon {
+        color: rgba($heading-text, .5);
+    }
+}
