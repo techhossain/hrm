@@ -2,6 +2,10 @@
 
 namespace Database\Factories;
 
+use App\Models\Country;
+use App\Models\Department;
+use App\Models\Designation;
+use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -17,26 +21,32 @@ class EmployeeFactory extends Factory
      */
     public function definition(): array
     {
+        $users = User::all()->pluck('id')->toArray();
+        $designations = Designation::all()->pluck('id')->toArray();
+        $departments = Department::all()->pluck('id')->toArray();
+        $countries = Country::all()->pluck('id')->toArray();
+
         return [
-            'user_id'           => fake()->numberBetween(1, 20),
-            'name'              => fake()->name(),
-            'profile_picture'   => fake()->imageUrl(),
-            'designation_id'    => fake()->numberBetween(1, 20),
-            'department_id'     => fake()->numberBetween(1, 20),
-            'country_id'        => fake()->numberBetween(1, 20),
+            'user_id'           => fake()->unique()->randomElement($users),
+            'designation_id'    => fake()->randomElement($designations),
+            'department_id'     => fake()->randomElement($departments),
+            'country_id'        => fake()->randomElement($countries),
+            'joining_date'      => fake()->date(),
+
+            'birth_date'        => fake()->date(),
             'mobile'            => fake()->phoneNumber(),
             'gender'            => 'Male',
-            'joining_date'      => fake()->date(),
-            'birth_date'        => fake()->date(),
+            'address'           => fake()->address(),
+            'about'             => fake()->paragraph(1, true),
+            'slack_username'    => fake()->userName(),
+
+
             'reporting_to'      => fake()->numberBetween(1, 20),
             'language_id'       => fake()->numberBetween(1, 20),
-            'address'           => fake()->address(),
-            'about'             => fake()->paragraph(3, true),
             'login_permission'  => fake()->boolean(),
             'notification_permission'   => fake()->boolean(),
             'hourly_rate'       => fake()->numberBetween(10, 30),
-            'slack_username'    => fake()->userName(),
-            'skills'            => fake()->paragraph(),
+            'skills'            => fake()->paragraph(1, true),
         ];
     }
 }

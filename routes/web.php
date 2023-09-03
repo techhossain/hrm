@@ -43,3 +43,20 @@ Route::group(['middleware' => 'guest'], function () {
 
     Route::get('/login', [AuthController::class, 'login']);
 });
+
+
+Route::get('load-data', function () {
+
+    $countries = json_decode(file_get_contents(public_path() . "/countries.json"), true);
+
+    $common = [];
+
+    foreach ($countries as $contry) {
+        // dd($contry);
+        array_push($common, $contry['name']['common']);
+    }
+
+    dd(count($common));
+
+    // echo $countries[0]['name']['common'];
+});

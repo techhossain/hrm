@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->string('name');
-            $table->string('profile_picture')->nullable();
             $table->foreignId('designation_id');
             $table->foreignId('department_id');
             $table->foreignId('country_id')->nullable();
