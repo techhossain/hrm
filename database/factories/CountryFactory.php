@@ -17,11 +17,14 @@ class CountryFactory extends Factory
      */
     public function definition(): array
     {
-        $countries = Country::getAllCountries();
+        // $countries = Country::getAllCountries();
+        // $countries = Country::getCountries();
+
 
         return [
-            'country_name' => fake()->unique()->randomElement($countries),
-            'flag_image' => null,
+            // 'country_name' => fake()->unique()->randomElement($countries),
+            // 'country_code' => '',
+            // 'flag_image' => null,
         ];
     }
 }

@@ -13,7 +13,18 @@ class CountrySeeder extends Seeder
      */
     public function run(): void
     {
-        $count_all = count(Country::getAllCountries());
-        Country::factory($count_all)->create();
+
+        $countries_file = file_get_contents(public_path() . '/data/countries2.json');
+        $countries_array = json_decode($countries_file, true);
+
+
+        foreach ($countries_array as $single_country) {
+            $country = new Country;
+            $country->country_name = $single_country['name'];
+            $country->country_code = $single_country['code'];
+            $country->flag_image = strtolower($single_country['code']) . '.png';
+
+            $country->save();
+        }
     }
 }

@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\Country;
 use App\Models\Department;
 use App\Models\Designation;
+use App\Models\Language;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -25,6 +26,7 @@ class EmployeeFactory extends Factory
         $designations = Designation::all()->pluck('id')->toArray();
         $departments = Department::all()->pluck('id')->toArray();
         $countries = Country::all()->pluck('id')->toArray();
+        $languages = Language::all()->pluck('id')->toArray();
 
         return [
             'user_id'           => fake()->unique()->randomElement($users),
@@ -42,7 +44,7 @@ class EmployeeFactory extends Factory
 
 
             'reporting_to'      => fake()->numberBetween(1, 20),
-            'language_id'       => fake()->numberBetween(1, 20),
+            'language_id'       => fake()->numberBetween($languages),
             'login_permission'  => fake()->boolean(),
             'notification_permission'   => fake()->boolean(),
             'hourly_rate'       => fake()->numberBetween(10, 30),

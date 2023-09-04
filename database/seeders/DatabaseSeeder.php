@@ -9,6 +9,7 @@ use Illuminate\Database\Seeder;
 use Database\Seeders\UserSeeder;
 use Database\Seeders\CountrySeeder;
 use Database\Seeders\EmployeeSeeder;
+use Database\Seeders\LanguageSeeder;
 use Database\Seeders\DepartmentSeeder;
 use Database\Seeders\DesignationSeeder;
 
@@ -25,10 +26,11 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        $this->call(DesignationSeeder::class);
-        $this->call(CountrySeeder::class);
-        $this->call(DepartmentSeeder::class);
         $this->call(UserSeeder::class);
+        $this->call(DesignationSeeder::class);
+        $this->call(DepartmentSeeder::class);
+        $this->call(CountrySeeder::class);
+        $this->call(LanguageSeeder::class);
         $this->call(EmployeeSeeder::class);
     }
 }
