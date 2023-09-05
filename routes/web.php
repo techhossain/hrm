@@ -1,11 +1,13 @@
 <?php
 
+use App\Models\User;
 use App\Models\Country;
 use App\Models\Language;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,9 +33,11 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function () {
 
     // Route for Dashboard
-    Route::get('/dashboard', [AdminController::class, 'index']);
+    Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
     // Route for Employee list
-    Route::get('/employees', [EmployeeController::class, 'index']);
+    Route::get('/employees', [EmployeeController::class, 'index'])->name('admin.employees');
+    // Route for Users list
+    Route::get('/users', [UserController::class, 'index'])->name('admin.users');
 });
 
 /*
@@ -129,4 +133,7 @@ Route::get('load-data', function () {
 
     // dd($language_array);
 
+    $users = User::get();
+
+    dd($users);
 });
