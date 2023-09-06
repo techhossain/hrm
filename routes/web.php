@@ -37,7 +37,11 @@ Route::group(['prefix' => 'admin'], function () {
     // Route for Employee list
     Route::get('/employees', [EmployeeController::class, 'index'])->name('admin.employees');
     // Route for Users list
+
     Route::get('/users', [UserController::class, 'index'])->name('admin.users');
+    // Route for create Users
+    Route::get('/user/create', [UserController::class, 'create'])->name('admin.user.create');
+    Route::post('/user/create', [UserController::class, 'store'])->name('admin.user.store');
 });
 
 /*
@@ -133,7 +137,7 @@ Route::get('load-data', function () {
 
     // dd($language_array);
 
-    $users = User::get();
+    $users = User::find(1);
 
-    dd($users);
+    dd($users->employee->designation);
 });

@@ -12,9 +12,19 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        if (!isset($_GET['user']) || empty($_GET['user'])) {
+            $users = User::paginate(8);
+            $pagination = 1;
+        } else {
 
-        return view('admin.user.user-list', compact('users'));
+            $search_text = isset($_GET['user']) ? $_GET['user'] : '';
+            $users = User::where('name', 'LIKE', '%' . $search_text . '%')->orWhere('email', 'LIKE', '%' . $search_text . '%')->get();
+            $pagination = 0;
+        }
+
+
+
+        return view('admin.user.user-list', compact('users', 'pagination'));
     }
 
     /**
@@ -22,7 +32,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.user.create-user');
     }
 
     /**
@@ -30,7 +40,24 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'  => 'required',
+            'email'  => 'required|email',
+            'password'  => 'required|min:6|confirmed'
+        ]);
+
+        $user = new User;
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = $request->password;
+
+        $data = $user->save();
+
+        if ($data) {
+            return redirect()->route('admin.user.create')->with('message', 'User created Successfully');
+        } else {
+            return redirect()->route('admin.user.create')->with('message', 'User created Failed');
+        }
     }
 
     /**

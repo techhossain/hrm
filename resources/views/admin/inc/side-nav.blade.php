@@ -36,12 +36,12 @@
                         </a>
                         <ul class="t-list mx-sidenav__sub mx-sidenav__sub--hide">
                             <li class="mx-sidenav__sub-item">
-                                <a href="user.html" class="mx-sidenav__sub-link">
+                                <a href="{{ route('admin.user.create') }}" class="mx-sidenav__sub-link">
                                     <span class="mx-sidenav__sub-icon t-mr-15">
                                         <i class='bx bxs-user-plus'></i>
                                     </span>
                                     <span class="mx-sidenav__sub-text text-capitalize">
-                                        user
+                                        Create User
                                     </span>
                                 </a>
                             </li>
