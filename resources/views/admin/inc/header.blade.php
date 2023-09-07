@@ -11,5 +11,9 @@
 
   <!-- Stylesheet Link -->
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
 </head>
+
 <body class="t-bg-primary mx-sidenav-not-collapsed">

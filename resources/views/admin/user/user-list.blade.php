@@ -15,12 +15,12 @@
               </div>
             </form>
           </div>
-          <div>
-              @if(session()->has('message'))
+          <div class="col-6">
+            @if(session()->has('message'))
 
-                  {{ session('message') }}
+            <div class="alert alert-success">{{ session('message') }}</div>
 
-              @endif
+            @endif
           </div>
         </div>
       </div>
@@ -39,7 +39,7 @@
 
     <div class="col-md-6 col-lg-4 col-xxl-3">
       <div class="id-card t-shadow t-bg-white text-center">
-        <span class="id-card__number id-card__number--{{ ($user->id % 4 == 0) ? 'warning' : ( ($user->id % 4 == 1) ? 'success' : ( ($user->id % 4 == 2) ? 'primary' : 'secondary')) }}">{{ $user->id }}</span>
+        <span class="id-card__number id-card__number--{{ ($user->id % 2 == 0) ? 'primary' : 'success' }}">{{ $user->id }}</span>
         <div class="avatars avatars--circle avatars--xl mx-auto">
           <img src="{{ isset($user->profile_picture) ? $user->profile_picture : 'https://source.unsplash.com/random/300x300'}}" alt="max" class="img-fulid w-100">
           <div class="avatars__status">
@@ -65,7 +65,32 @@
               <span class="d-inlin-block sm-text text-capitalize">{{ isset($user->employee->mobile) ? $user->employee->mobile : "01678136325" }}</span>
             </li>
           </ul>
-          <button type="button" class="btn btn-transparent sm-text font-weight-bold w-100 text-capitalize t-mt-15 btn-{{ ($user->id % 4 == 0) ? 'warning' : ( ($user->id % 4 == 1) ? 'success' : ( ($user->id % 4 == 2) ? 'primary' : 'secondary')) }}">write message</button>
+
+          <!-- Actions for Edit and Delete -->
+          <div class="action py-2">
+
+            <a href="{{ route('admin.user.edit', $user->id) }}" class="btn btn-sm btn-transparent sm-text font-weight-bold text-capitalize t-mt-15 btn-primary" id="edit-{{$user->id}}">Edit</a>
+
+            <a href="#" class="btn btn-sm btn-transparent sm-text font-weight-bold text-capitalize t-mt-15 btn-danger delete-btn" id="delete-{{$user->id}}">Delete</a>
+
+            <!-- Modal for deletion user -->
+            <form action="{{ route('admin.user.delete', $user->id) }}" method="POST" id="delete-form">
+              @csrf
+              <div id="modal-js-example" class="modal">
+                <div class="modal-background" style="background-color: rgba(10,10,10,0.5);"></div>
+                <div class="modal-content">
+                  <div class="box p-5">
+                    <p class="my-3">Do you want to delete - <b>{{$user->name}} ?</b></p>
+                    <button type="submit" class="btn btn-sm btn-danger delete-yes">Yes</button>
+                    <a href="#" class="btn btn-sm btn-primary delete-no">No</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+          <button type="button" class="btn btn-transparent sm-text font-weight-bold w-100 text-capitalize t-mt-15 btn-{{ ($user->id % 2 == 0) ? 'primary' : 'success' }}">write message</button>
         </div>
       </div>
     </div>
@@ -74,8 +99,7 @@
   </div>
 
   <!-- Pagination -->
-  @if( $pagination == 1)
-
+  @if( $pagination == 1 && $users->hasPages())
   <div class="t-bg-white cards rounded-0 t-shadow mt-3 mb-3 py-2">
     <div class="container-fluid px-3">
       <div class="row">
@@ -87,29 +111,10 @@
       </div>
     </div>
   </div>
-
   @endif
 
   </div>
 </main>
-
-
-<div class="modal" tabindex="-1" id="modal-success">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-
-        <p>
-          @if(session()->has('message'))
-
-              {{ session('message') }}
-
-          @endif
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 

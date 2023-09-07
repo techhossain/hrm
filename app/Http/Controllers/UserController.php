@@ -13,7 +13,9 @@ class UserController extends Controller
     public function index()
     {
         if (!isset($_GET['user']) || empty($_GET['user'])) {
-            $users = User::orderBy('id', 'desc')->paginate(8);
+
+            $items_per_page = 8;
+            $users = User::orderBy('id', 'desc')->paginate($items_per_page);
             $pagination = 1;
         } else {
 
@@ -73,7 +75,8 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $user = User::find($id);
+        return view('admin.user.edit-user', compact('id', 'user'));
     }
 
     /**
@@ -81,7 +84,25 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'name'  => 'required',
+            'email'  => 'required|email',
+            // 'password'  => 'required|min:6|confirmed'
+        ]);
+
+        $user = User::find($id);
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        // $user->password = $request->password;
+
+        $data = $user->save();
+
+        if ($data) {
+            return redirect()->route('admin.users')->with('message', 'User updated Successfully');
+        } else {
+            return redirect()->route('admin.user.create')->with('message', 'User updation Failed');
+        }
     }
 
     /**
@@ -89,6 +110,10 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $user = User::find($id);
+
+        if ($user->delete()) {
+            return redirect()->route('admin.users')->with('message', 'User Deleted!');
+        }
     }
 }

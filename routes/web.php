@@ -36,12 +36,21 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
     // Route for Employee list
     Route::get('/employees', [EmployeeController::class, 'index'])->name('admin.employees');
-    // Route for Users list
 
+
+    // Route for Users list
     Route::get('/users', [UserController::class, 'index'])->name('admin.users');
+
     // Route for create Users
     Route::get('/user/create', [UserController::class, 'create'])->name('admin.user.create');
     Route::post('/user/create', [UserController::class, 'store'])->name('admin.user.store');
+
+    // Route for update user
+    Route::get('/user/edit/{id}', [UserController::class, 'edit'])->name('admin.user.edit');
+    Route::post('/user/update/{id}', [UserController::class, 'update'])->name('admin.user.update');
+
+    // Route for Delete user
+    Route::post('/user/delete/{id}', [UserController::class, 'destroy'])->name('admin.user.delete');
 });
 
 /*
