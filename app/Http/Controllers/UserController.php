@@ -13,7 +13,7 @@ class UserController extends Controller
     public function index()
     {
         if (!isset($_GET['user']) || empty($_GET['user'])) {
-            $users = User::paginate(8);
+            $users = User::orderBy('id', 'desc')->paginate(8);
             $pagination = 1;
         } else {
 
@@ -54,7 +54,7 @@ class UserController extends Controller
         $data = $user->save();
 
         if ($data) {
-            return redirect()->route('admin.user.create')->with('message', 'User created Successfully');
+            return redirect()->route('admin.users')->with('message', 'User created Successfully');
         } else {
             return redirect()->route('admin.user.create')->with('message', 'User created Failed');
         }

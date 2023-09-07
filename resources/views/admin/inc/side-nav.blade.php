@@ -51,7 +51,7 @@
                                         <i class='bx bxs-user-detail'></i>
                                     </span>
                                     <span class="mx-sidenav__sub-text text-capitalize">
-                                        user list
+                                        All Users
                                     </span>
                                 </a>
                             </li>

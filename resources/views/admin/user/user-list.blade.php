@@ -15,6 +15,13 @@
               </div>
             </form>
           </div>
+          <div>
+              @if(session()->has('message'))
+
+                  {{ session('message') }}
+
+              @endif
+          </div>
         </div>
       </div>
     </div>
@@ -42,7 +49,7 @@
         <div class="id-card__body t-mt-30">
           <h5 class="id-card__title text-capitalize mt-0 mb-0">{{ $user->name }}</h5>
           <span class="id-card__sub-title text-capitalize xsm-text">
-            {{ isset($user->employee->designation->designation_name) ? $user->employee->designation->designation_name : "" }}
+            {{ isset($user->employee->designation->designation_name) ? $user->employee->designation->designation_name : "Employee" }}
           </span>
           <ul class="t-list">
             <li class="t-mb-5">
@@ -85,4 +92,25 @@
 
   </div>
 </main>
+
+
+<div class="modal" tabindex="-1" id="modal-success">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+
+        <p>
+          @if(session()->has('message'))
+
+              {{ session('message') }}
+
+          @endif
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 @endsection

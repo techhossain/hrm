@@ -36,6 +36,9 @@
   <script src="{{ asset('assets/js/chart-dash-1.js') }}"></script>
   <!-- Main script -->
   <script src="{{ asset('assets/js/main.js') }}"></script>
+
+  <script src="{{ asset('assets/custom/app.js') }}"></script>
+
 </body>
 
 </html>
