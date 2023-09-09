@@ -4,14 +4,12 @@
 
 <main class="main-content t-mt-15 t-mb-15">
   <div class="container-fluid px-3">
-    <h4>Create new user</h4>
 
     @if(session()->has('message'))
     <div class="alert alert-success">
       {{ session('message') }}
     </div>
     @endif
-
 
 
     @if( $errors->any() )
@@ -25,7 +23,7 @@
 
     <div class="card">
       <div class="card-body">
-        <form action="{{ route('admin.user.update', $user->id) }}" method="POST">
+        <form action="{{ route('admin.user.update', $user->id) }}" method="POST" enctype="multipart/form-data">
           @csrf
 
           <div class="mb-3">
@@ -39,6 +37,13 @@
           </div>
 
           <div class="mb-3">
+            <label for="upload-image" class="form-label">Upload Image</label>
+            <input type="file" class="form-control" id="upload-image" name="profile_pic" placeholder="" value="">
+
+            <p><img src="{{ $user->getFirstMediaUrl('profile_pic') }}" alt="{{$user->name}}"></p>
+          </div>
+
+          <div class="mb-3">
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" id="password" name="password" placeholder="********">
           </div>
@@ -48,7 +53,7 @@
             <input type="password" class="form-control" id="password" name="password_confirmation" placeholder="********">
           </div>
 
-          <button type="submit" class="btn btn-primary">Update  User</button>
+          <button type="submit" class="btn btn-primary">Update User</button>
         </form>
 
 

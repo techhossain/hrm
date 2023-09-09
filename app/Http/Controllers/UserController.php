@@ -87,18 +87,27 @@ class UserController extends Controller
         $request->validate([
             'name'  => 'required',
             'email'  => 'required|email',
-            // 'password'  => 'required|min:6|confirmed'
+            'profile_pic' => 'mimes:jpg,png,jpeg,bmp',
+            'password'  => 'required|min:6|confirmed'
         ]);
 
         $user = User::find($id);
 
         $user->name = $request->name;
         $user->email = $request->email;
-        // $user->password = $request->password;
+
+        $user->password = $request->password;
+        $photo = $request->file('profile_pic');
+
+        if ($photo->isValid()) {
+            $user->addMediaFRomRequest('profile_pic')
+                ->toMediaCollection('Profile Picture');
+        }
 
         $data = $user->save();
 
         if ($data) {
+
             return redirect()->route('admin.users')->with('message', 'User updated Successfully');
         } else {
             return redirect()->route('admin.user.create')->with('message', 'User updation Failed');

@@ -4,6 +4,12 @@
 <main class="main-content t-mt-15 t-mb-15">
   <div class="container-fluid px-3">
 
+    <div class="col">
+      @if(session()->has('message'))
+      <div class="alert alert-success">{{ session('message') }}</div>
+      @endif
+    </div>
+
     <!-- Search Bar -->
     <div class="t-bg-white cards rounded-0 t-shadow mt-3 mb-3 py-2">
       <div class="container-fluid px-3">
@@ -14,13 +20,6 @@
                 <input name="user" value="{{ isset($_GET['user'])? $_GET['user'] : '' }}" type="text" class="form-control" id="search" placeholder="Search Here">
               </div>
             </form>
-          </div>
-          <div class="col-6">
-            @if(session()->has('message'))
-
-            <div class="alert alert-success">{{ session('message') }}</div>
-
-            @endif
           </div>
         </div>
       </div>
