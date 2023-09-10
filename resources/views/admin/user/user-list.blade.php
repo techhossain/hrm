@@ -40,7 +40,7 @@
       <div class="id-card t-shadow t-bg-white text-center">
         <span class="id-card__number id-card__number--{{ ($user->id % 2 == 0) ? 'primary' : 'success' }}">{{ $user->id }}</span>
         <div class="avatars avatars--circle avatars--xl mx-auto">
-          <img src="{{ isset($user->profile_picture) ? $user->profile_picture : 'https://source.unsplash.com/random/300x300'}}" alt="max" class="img-fulid w-100">
+          <img src="{{ ($user->getFirstMediaUrl('dp')) ? $user->getFirstMediaUrl('dp') : 'https://source.unsplash.com/random/300x300'}}" alt="max" class="img-fulid w-100">
           <div class="avatars__status">
             <i class="las la-check"></i>
           </div>

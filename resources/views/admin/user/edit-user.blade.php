@@ -3,6 +3,7 @@
 @section('content')
 
 <main class="main-content t-mt-15 t-mb-15">
+
   <div class="container-fluid px-3">
 
     @if(session()->has('message'))
@@ -38,9 +39,9 @@
 
           <div class="mb-3">
             <label for="upload-image" class="form-label">Upload Image</label>
-            <input type="file" class="form-control" id="upload-image" name="profile_pic" placeholder="" value="">
+            <input type="file" class="form-control" id="upload-image" name="photo">
 
-            <p><img src="{{ $user->getFirstMediaUrl('profile_pic') }}" alt="{{$user->name}}"></p>
+            <p><img class="img-fluid w-50" src="{{ $user->getFirstMediaUrl('dp') }}" alt="{{$user->name}}"></p>
           </div>
 
           <div class="mb-3">

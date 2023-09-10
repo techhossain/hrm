@@ -87,21 +87,23 @@ class UserController extends Controller
         $request->validate([
             'name'  => 'required',
             'email'  => 'required|email',
-            'profile_pic' => 'mimes:jpg,png,jpeg,bmp',
-            'password'  => 'required|min:6|confirmed'
+            'password'  => 'required|min:6|confirmed',
+            'dp' => 'mimes:jpg,png,jpeg,bmp'
         ]);
 
         $user = User::find($id);
 
         $user->name = $request->name;
         $user->email = $request->email;
-
         $user->password = $request->password;
-        $photo = $request->file('profile_pic');
+
+        $photo = $request->file('photo');
 
         if ($photo->isValid()) {
-            $user->addMediaFRomRequest('profile_pic')
-                ->toMediaCollection('Profile Picture');
+            // $user->addMediaFRomRequest('profile_pic')
+            //     ->toMediaCollection('Profile Picture');
+
+            $user->addMediaFromRequest('photo')->toMediaCollection('dp');
         }
 
         $data = $user->save();
