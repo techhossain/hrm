@@ -30,10 +30,11 @@ Route::get('/', function () {
 | Admin Dashboard --> Registered user
 |--------------------------------------------------------------------------
 */
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     // Route for Dashboard
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+
     // Route for Employee list
     Route::get('/employees', [EmployeeController::class, 'index'])->name('admin.employees');
 
@@ -51,6 +52,8 @@ Route::group(['prefix' => 'admin'], function () {
 
     // Route for Delete user
     Route::post('/user/delete/{id}', [UserController::class, 'destroy'])->name('admin.user.delete');
+    // Logout
+    Route::post('/logout', [UserController::class, 'user_logout'])->name('user.logout');
 });
 
 /*
@@ -60,7 +63,8 @@ Route::group(['prefix' => 'admin'], function () {
 */
 Route::group(['middleware' => 'guest'], function () {
 
-    Route::get('/login', [AuthController::class, 'login']);
+    Route::get('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/login', [AuthController::class, 'user_login'])->name('user.login');
 });
 
 

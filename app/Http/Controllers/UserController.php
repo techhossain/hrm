@@ -127,4 +127,13 @@ class UserController extends Controller
             return redirect()->route('admin.users')->with('message', 'User Deleted!');
         }
     }
+
+    public function user_logout(Request $request)
+    {
+        auth()->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('login')->with('message', 'Please Login!');
+    }
 }

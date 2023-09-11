@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -10,6 +11,22 @@ class AuthController extends Controller
     public function login()
     {
         return view('auth.authentication');
+    }
+
+    public function user_login(Request $request)
+    {
+        $data = $request->validate([
+            'email' => 'required|email|exists:users',
+            'password'  => 'required|min:6'
+        ]);
+
+        // $user = $request->all();
+
+        if (Auth::attempt($data)) {
+            return redirect()->route('admin.dashboard');
+        } else {
+            return redirect()->route('login')->with('message', 'Login Invalid');
+        }
     }
 
     /**
