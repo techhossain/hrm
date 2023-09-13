@@ -59,7 +59,7 @@
                     </li>
 
                     <li class="mx-sidenav__menu-item">
-                        <a href="profile.html" class="mx-sidenav__menu-link">
+                        <a href="{{ route('admin.user.profile') }}" class="mx-sidenav__menu-link">
                             <span class="mx-sidenav__menu-icon t-mr-15">
                                 <i class='bx bxs-user-account'></i>
                             </span>

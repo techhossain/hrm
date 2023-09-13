@@ -13,21 +13,17 @@ class UserController extends Controller
     public function index()
     {
         if (!isset($_GET['user']) || empty($_GET['user'])) {
-
             $items_per_page = 6;
             $users = User::orderBy('id', 'desc')->paginate($items_per_page);
             $pagination = 1;
         } else {
-
             $search_text = isset($_GET['user']) ? $_GET['user'] : '';
             $users = User::where('name', 'LIKE', '%' . $search_text . '%')->orWhere('email', 'LIKE', '%' . $search_text . '%')->get();
             $pagination = 0;
         }
-
-
-
         return view('admin.user.user-list', compact('users', 'pagination'));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -36,6 +32,7 @@ class UserController extends Controller
     {
         return view('admin.user.create-user');
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -76,7 +73,15 @@ class UserController extends Controller
     public function edit(string $id)
     {
         $user = User::find($id);
-        return view('admin.user.edit-user', compact('id', 'user'));
+
+        $last_media_item = $user->getMedia('dp')->reverse()->first();
+        $file_name = $last_media_item->file_name;
+        $media_id = $last_media_item->id;
+
+        $media_url = sprintf("%s/%s/%s", asset('storage'), $media_id, $file_name);
+
+
+        return view('admin.user.edit-user', compact('id', 'user', 'media_url'));
     }
 
     /**
@@ -139,4 +144,63 @@ class UserController extends Controller
 
         return redirect()->route('login')->with('message', 'Please Login!');
     }
+
+    /**
+     * Show User Profile Page.
+     */
+    public function show_user_profile()
+    {
+        $user = auth()->user();
+        $last_media_item = $user->getMedia('dp')->reverse()->first();
+        $file_name = $last_media_item->file_name;
+        $media_id = $last_media_item->id;
+
+        $media_url = sprintf("%s/%s/%s", asset('storage'), $media_id, $file_name);
+
+        return view('admin.user.profile', compact('user', 'media_url'));
+    }
+
+    /**
+     * Update User Profile
+     */
+    public function update_user_profile(Request $request){
+        $request->validate([
+            'name'  => 'required',
+            'email'  => 'required|email',
+            'dp' => 'mimes:jpg,png,jpeg,bmp'
+        ]);
+
+        $user = auth()->user();
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+
+        if(isset($request->password)){
+            $user->password = $request->password;
+        }
+
+        $photo = $request->file('photo');
+
+        if ( isset($photo) && $photo->isValid() ) {
+            // $user->addMediaFRomRequest('profile_pic')
+            //     ->toMediaCollection('Profile Picture');
+
+            $user->addMediaFromRequest('photo')->toMediaCollection('dp');
+        }
+
+        $data = $user->save();
+
+        if ($data) {
+
+            return redirect()->route('admin.user.profile')->with('message', 'Profile updated Successfully');
+        } else {
+            return redirect()->route('admin.users')->with('message', 'User updation Failed');
+        }
+    }
+
+
+
+
+
+
 }

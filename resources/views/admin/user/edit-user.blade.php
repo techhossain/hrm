@@ -21,7 +21,6 @@
 
     @endif
 
-
     <div class="card">
       <div class="card-body">
         <form action="{{ route('admin.user.update', $user->id) }}" method="POST" enctype="multipart/form-data">
@@ -41,7 +40,7 @@
             <label for="upload-image" class="form-label">Upload Image</label>
             <input type="file" class="form-control" id="upload-image" name="photo">
 
-            <p><img class="img-fluid w-50" src="{{ $user->getFirstMediaUrl('dp') }}" alt="{{$user->name}}"></p>
+            <p><img class="img-fluid w-50" src="{{ $media_url }}" alt="{{$user->name}}"></p>
           </div>
 
           <div class="mb-3">

@@ -30,7 +30,7 @@ Route::get('/', function () {
 | Admin Dashboard --> Registered user
 |--------------------------------------------------------------------------
 */
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'can:manage_all']], function () {
 
     // Route for Dashboard
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
@@ -50,11 +50,34 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/user/edit/{id}', [UserController::class, 'edit'])->name('admin.user.edit');
     Route::post('/user/update/{id}', [UserController::class, 'update'])->name('admin.user.update');
 
+    // Route for user profile
+    Route::get('/user/profile', [UserController::class, 'show_user_profile'])->name('admin.user.profile');
+    Route::post('/user/profile', [UserController::class, 'update_user_profile'])->name('admin.user.profile.update');
+
+
+
     // Route for Delete user
     Route::post('/user/delete/{id}', [UserController::class, 'destroy'])->name('admin.user.delete');
     // Logout
     Route::post('/logout', [UserController::class, 'user_logout'])->name('user.logout');
 });
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Employee - Panel
+|--------------------------------------------------------------------------
+*/
+Route::group(['prefix' => 'employee', 'middleware' => ['auth', 'can:manage_all']], function () {
+
+    // Route for Employee list
+    Route::get('/dashboard', function () {
+        return "Employee";
+    })->name('employee.dashboard');
+});
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -66,11 +89,6 @@ Route::group(['middleware' => 'guest'], function () {
     Route::get('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/login', [AuthController::class, 'user_login'])->name('user.login');
 });
-
-
-
-
-
 
 
 

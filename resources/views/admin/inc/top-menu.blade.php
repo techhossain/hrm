@@ -92,7 +92,7 @@
                                                             </a>
                                                         </li>
                                                         <li class="mega-menu__sub-list">
-                                                            <a href="profile.html" class="mega-menu__link text-capitalize">
+                                                            <a href="{{ route('admin.user.profile') }}" class="mega-menu__link text-capitalize">
                                                                 profile
                                                             </a>
                                                         </li>
@@ -233,7 +233,6 @@
                                                     <a href="#" class="t-link w-100">
                                                         <div class="messages__msg">
                                                             <div class="messages__avatar messages__avatar-empty t-bg-alpha">
-                                                                <img src="{{ auth()->user()->profile_picture }}" alt="Adminage" class="img-fluid w-100" />
                                                                 <div class="messages__avatar-notification messages__avatar-notification--offline">
                                                                 </div>
                                                             </div>
@@ -709,7 +708,7 @@
                                             <hr class="mx-hr bg-light m-0">
                                         </li>
                                         <li class="mx-author-menu__list">
-                                            <a href="#" class="mx-author-menu__link text-capitalize">
+                                            <a href="{{ route('admin.user.profile') }}" class="mx-author-menu__link text-capitalize">
                                                 <div class="d-flex align-items-center">
                                                     <span class="xxlg-text t-mr-8 d-inline-block t-line-1">
                                                         <i class='bx bx-user-circle'></i>
