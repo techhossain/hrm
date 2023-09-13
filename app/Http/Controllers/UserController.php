@@ -14,7 +14,7 @@ class UserController extends Controller
     {
         if (!isset($_GET['user']) || empty($_GET['user'])) {
 
-            $items_per_page = 8;
+            $items_per_page = 6;
             $users = User::orderBy('id', 'desc')->paginate($items_per_page);
             $pagination = 1;
         } else {
@@ -87,7 +87,6 @@ class UserController extends Controller
         $request->validate([
             'name'  => 'required',
             'email'  => 'required|email',
-            'password'  => 'required|min:6|confirmed',
             'dp' => 'mimes:jpg,png,jpeg,bmp'
         ]);
 
@@ -95,7 +94,11 @@ class UserController extends Controller
 
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = $request->password;
+
+        if(isset($request->password)){
+            $user->password = $request->password;
+        }
+
 
         $photo = $request->file('photo');
 
