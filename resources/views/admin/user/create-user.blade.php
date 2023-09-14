@@ -48,6 +48,20 @@
             <input type="password" class="form-control" id="password" name="password_confirmation" placeholder="********">
           </div>
 
+          <div class="mb-3">
+            <label for="upload-image" class="form-label">Upload Image</label>
+            <input type="file" class="form-control" id="upload-image" name="photo">
+          </div>
+
+          <div class="mb-4">
+            <label for="is_admin" class="form-label">Select User Role</label>
+            <select class="form-select form-select-sm" id="is_admin" name="is_admin">
+              <option value="Administrator">Administrator</option>
+              <option value="Employee" selected>Employee</option>
+            </select>
+
+          </div>
+
           <button type="submit" class="btn btn-primary">Create User</button>
         </form>
 

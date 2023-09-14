@@ -42,13 +42,29 @@ class UserController extends Controller
         $request->validate([
             'name'  => 'required',
             'email'  => 'required|email',
-            'password'  => 'required|min:6|confirmed'
+            'password'  => 'required|min:6|confirmed',
+            'photo' => 'mimes:jpg,png,jpeg,bmp'
         ]);
 
         $user = new User;
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = $request->password;
+
+        // Upload photo
+        $photo = $request->file('photo');
+        if ( $photo->isValid() ) {
+            $user->addMediaFromRequest('photo')->toMediaCollection('dp');
+        }
+
+        // User role
+        $is_admin = $request->is_admin;
+        if($is_admin == "Administrator"){
+            $user->is_admin = true;
+        }
+        else if($is_admin == "Employee") {
+            $user->is_admin = false;
+        }
 
         $data = $user->save();
 
@@ -75,7 +91,6 @@ class UserController extends Controller
         $user = User::find($id);
 
         $helpers = \App\Helpers\Helpers::instance();
-
         $media_url = $helpers->user_photo_url($user, 'dp');
 
 
