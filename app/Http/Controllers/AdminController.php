@@ -12,7 +12,11 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $user = auth()->user();
+        $helpers = \App\Helpers\Helpers::instance();
+        $media_url = $helpers->user_photo_url($user, 'dp');
+
+        return view('admin.dashboard', compact('media_url'));
     }
 
     /**

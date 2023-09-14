@@ -74,11 +74,9 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        $last_media_item = $user->getMedia('dp')->reverse()->first();
-        $file_name = $last_media_item->file_name;
-        $media_id = $last_media_item->id;
+        $helpers = \App\Helpers\Helpers::instance();
 
-        $media_url = sprintf("%s/%s/%s", asset('storage'), $media_id, $file_name);
+        $media_url = $helpers->user_photo_url($user, 'dp');
 
 
         return view('admin.user.edit-user', compact('id', 'user', 'media_url'));
@@ -151,11 +149,8 @@ class UserController extends Controller
     public function show_user_profile()
     {
         $user = auth()->user();
-        $last_media_item = $user->getMedia('dp')->reverse()->first();
-        $file_name = $last_media_item->file_name;
-        $media_id = $last_media_item->id;
-
-        $media_url = sprintf("%s/%s/%s", asset('storage'), $media_id, $file_name);
+        $helpers = \App\Helpers\Helpers::instance();
+        $media_url = $helpers->user_photo_url($user, 'dp');
 
         return view('admin.user.profile', compact('user', 'media_url'));
     }

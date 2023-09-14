@@ -686,7 +686,7 @@
                                 <a href="#" aria-expanded="false" data-toggle="dropdown" class="t-link w-100 primary-nav-list__link primary-nav-list__link-has-menu text-capitalize">
                                     <div class="d-flex align-items-center">
                                         <span class="mx-user mx-user--sm">
-                                            <img src="{{ auth()->user()->profile_picture }}" alt="max" class="img-fluid w-100" />
+                                            <img src="{{ $media_url }}" alt="max" class="img-fluid w-100" />
                                         </span>
                                         <span class="d-none d-lg-inline-block t-ml-8">
                                             admin
