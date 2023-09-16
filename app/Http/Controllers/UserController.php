@@ -12,8 +12,6 @@ class UserController extends Controller
      */
     public function index()
     {
-        $hello = "Hello";
-    
         if (!isset($_GET['user']) || empty($_GET['user'])) {
             $items_per_page = 6;
             $users = User::orderBy('id', 'desc')->paginate($items_per_page);
@@ -42,20 +40,22 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name'  => 'required',
-            'email'  => 'required|email',
+            'name'      => 'required',
+            'email'     => 'required|email',
             'password'  => 'required|min:6|confirmed',
-            'photo' => 'mimes:jpg,png,jpeg,bmp'
+            'photo'     => 'nullable|mimes:jpg,png,jpeg,bmp'
         ]);
 
         $user = new User;
-        $user->name = $request->name;
-        $user->email = $request->email;
+
+        $user->name     = $request->name;
+        $user->email    = $request->email;
         $user->password = $request->password;
 
         // Upload photo
         $photo = $request->file('photo');
-        if ( $photo->isValid() ) {
+
+        if ( !empty($photo) && $photo->isValid() ) {
             $user->addMediaFromRequest('photo')->toMediaCollection('dp');
         }
 
@@ -105,9 +105,9 @@ class UserController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'name'  => 'required',
-            'email'  => 'required|email',
-            'dp' => 'mimes:jpg,png,jpeg,bmp'
+            'name'      => 'required',
+            'email'     => 'required|email',
+            'dp'        => 'mimes:jpg,png,jpeg,bmp'
         ]);
 
         $user = User::find($id);
