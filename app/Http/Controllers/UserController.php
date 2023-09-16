@@ -12,6 +12,8 @@ class UserController extends Controller
      */
     public function index()
     {
+        $hello = "Hello";
+    
         if (!isset($_GET['user']) || empty($_GET['user'])) {
             $items_per_page = 6;
             $users = User::orderBy('id', 'desc')->paginate($items_per_page);
@@ -42,13 +44,29 @@ class UserController extends Controller
         $request->validate([
             'name'  => 'required',
             'email'  => 'required|email',
-            'password'  => 'required|min:6|confirmed'
+            'password'  => 'required|min:6|confirmed',
+            'photo' => 'mimes:jpg,png,jpeg,bmp'
         ]);
 
         $user = new User;
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = $request->password;
+
+        // Upload photo
+        $photo = $request->file('photo');
+        if ( $photo->isValid() ) {
+            $user->addMediaFromRequest('photo')->toMediaCollection('dp');
+        }
+
+        // User role
+        $is_admin = $request->is_admin;
+        if($is_admin == "Administrator"){
+            $user->is_admin = true;
+        }
+        else if($is_admin == "Employee") {
+            $user->is_admin = false;
+        }
 
         $data = $user->save();
 
@@ -74,11 +92,8 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        $last_media_item = $user->getMedia('dp')->reverse()->first();
-        $file_name = $last_media_item->file_name;
-        $media_id = $last_media_item->id;
-
-        $media_url = sprintf("%s/%s/%s", asset('storage'), $media_id, $file_name);
+        $helpers = \App\Helpers\Helpers::instance();
+        $media_url = $helpers->user_photo_url($user, 'dp');
 
 
         return view('admin.user.edit-user', compact('id', 'user', 'media_url'));
@@ -151,11 +166,8 @@ class UserController extends Controller
     public function show_user_profile()
     {
         $user = auth()->user();
-        $last_media_item = $user->getMedia('dp')->reverse()->first();
-        $file_name = $last_media_item->file_name;
-        $media_id = $last_media_item->id;
-
-        $media_url = sprintf("%s/%s/%s", asset('storage'), $media_id, $file_name);
+        $helpers = \App\Helpers\Helpers::instance();
+        $media_url = $helpers->user_photo_url($user, 'dp');
 
         return view('admin.user.profile', compact('user', 'media_url'));
     }
