@@ -12,6 +12,8 @@ class UserController extends Controller
      */
     public function index()
     {
+        $hello = "Hello";
+    
         if (!isset($_GET['user']) || empty($_GET['user'])) {
             $items_per_page = 6;
             $users = User::orderBy('id', 'desc')->paginate($items_per_page);
