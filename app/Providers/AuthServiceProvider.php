@@ -26,7 +26,19 @@ class AuthServiceProvider extends ServiceProvider
     {
 
         Gate::define('manage_all', function (User $user) {
-            return 0 ==  count(Employee::where('user_id', $user->id)->get());
+            $user = auth()->user();
+            // return 0 ==  count(Employee::where('user_id', $user->id)->get());
+            if( $user->is_admin){
+                return true;
+            }else{
+                if( 1 >= count(Employee::where('user_id', $user->id)->get())){
+                    abort( redirect()->route('employee.dashboard') );
+                }
+                else{
+                  return redirect()->route('login');  
+                }
+                // return false;
+            }
         });
     }
 }

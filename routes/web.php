@@ -22,7 +22,7 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 
 /*
@@ -69,7 +69,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'can:manage_all']], 
 | Employee - Panel
 |--------------------------------------------------------------------------
 */
-Route::group(['prefix' => 'employee', 'middleware' => ['auth', 'can:manage_all']], function () {
+Route::group(['prefix' => 'employee', 'middleware' => ['auth']], function () {
 
     // Route for Employee list
     Route::get('/dashboard', function () {

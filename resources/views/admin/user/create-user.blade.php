@@ -25,17 +25,17 @@
 
     <div class="card">
       <div class="card-body">
-        <form action="{{ route('admin.user.store') }}" method="POST">
+        <form action="{{ route('admin.user.store') }}" method="POST" enctype="multipart/form-data">
           @csrf
 
           <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Full Name" name="name">
+            <input value="{{ old('name') }}" type="text" class="form-control" id="name" placeholder="Full Name" name="name">
           </div>
 
           <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com">
+            <input value="{{ old('email') }}" type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com">
           </div>
 
           <div class="mb-3">
