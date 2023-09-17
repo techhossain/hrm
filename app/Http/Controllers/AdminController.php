@@ -20,6 +20,15 @@ class AdminController extends Controller
     }
 
     /**
+     * Display all employees to admin dashboard
+     */
+    public function employee_index()
+    {
+        //
+        return view('admin.employee.index');
+    }
+
+    /**
      * Show the form for creating a new resource.
      */
     public function create()

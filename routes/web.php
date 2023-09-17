@@ -36,8 +36,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'can:manage_all']], 
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
 
     // Route for Employee list
-    Route::get('/employees', [EmployeeController::class, 'index'])->name('admin.employees');
-
+    Route::get('/employees', [AdminController::class, 'employee_index'])->name('admin.employees');
 
     // Route for Users list
     Route::get('/users', [UserController::class, 'index'])->name('admin.users');
@@ -55,13 +54,13 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'can:manage_all']], 
     Route::post('/user/profile', [UserController::class, 'update_user_profile'])->name('admin.user.profile.update');
 
 
-
     // Route for Delete user
     Route::post('/user/delete/{id}', [UserController::class, 'destroy'])->name('admin.user.delete');
-    // Logout
-    Route::post('/logout', [UserController::class, 'user_logout'])->name('user.logout');
+
 });
 
+    // Logout
+    Route::post('/logout', [UserController::class, 'user_logout'])->name('user.logout');
 
 
 /*
@@ -72,9 +71,19 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'can:manage_all']], 
 Route::group(['prefix' => 'employee', 'middleware' => ['auth']], function () {
 
     // Route for Employee list
-    Route::get('/dashboard', function () {
-        return "Employee";
-    })->name('employee.dashboard');
+    Route::get('/dashboard', [EmployeeController::class, 'index'])->name('employee.dashboard');
+    // Route for Employee Attandence
+    Route::get('/attendance', [EmployeeController::class, 'attendance'])->name('employee.attendance');
+    // Route for Employee Leaves
+    Route::get('/leaves', [EmployeeController::class, 'leaves'])->name('employee.leaves');
+    // Route for Employee Holiday
+    Route::get('/holiday', [EmployeeController::class, 'holiday'])->name('employee.holiday');
+
+
+    // Route for Employee Profile
+    Route::get('/profile', [EmployeeController::class, 'show_employee_profile'])->name('employee.profile.show');
+    Route::post('/profile', [EmployeeController::class, 'update_employee_profile'])->name('employee.profile.update');
+
 });
 
 
