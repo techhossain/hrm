@@ -6,7 +6,7 @@
 
   <!-- Side Nav / Display Only Small Screen  -->
 
-    @include('admin.inc.side-nav-mobile')
+    @include('employee.inc.side-nav-mobile')
 
   <!-- Side Nav / Display Only Small Screen  End-->
 
@@ -15,12 +15,12 @@
     <div class="row g-0">
 
       <!--SideNav / Display Only Small Screen  -->
-      @include('admin.inc.top-nav-mobile')
+      @include('employee.inc.top-nav-mobile')
       <!--SideNav/ Display Only Small Screen End -->
 
 
       <!--SideNav / Display Only Large Screen  -->
-      @include('admin.inc.side-nav')
+      @include('employee.inc.side-nav')
       <!--SideNav / Display Only Large Screen End -->
 
 
@@ -32,7 +32,7 @@
 
                 <header class="header sticky-top d-none d-xl-block">
 
-                  @include('admin.inc.top-menu')
+                  @include('employee.inc.top-menu')
 
                   <!-- Pagination -->
                   @include('component.pagination')
