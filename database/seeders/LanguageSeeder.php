@@ -22,14 +22,19 @@ class LanguageSeeder extends Seeder
             $country_name = $single_country['country'];
             $country_match = Country::where('country_name', $country_name)->first();
 
-            $country_languages = $single_country['languages'];
+            if( isset( $country_match->id ) ){
+                $country_id = $country_match->id;
+                $country_languages = $single_country['languages'];
 
-            if (isset($country_match->id) && !empty($country_match->id)) {
-                foreach ($country_languages as $single_language) {
-                    $language = new Language;
-                    $language->language_name = $single_language;
-                    $language->country_id = $country_match->id;
-                    $language->save();
+                if (isset($country_id) && !empty($country_id)) {
+
+                    foreach ($country_languages as $single_language) {
+                        $language = new Language;
+                        $language->language_name = $single_language;
+                        $language->country_id = $country_id;
+                        $language->save();
+                    }
+                    
                 }
             }
         }

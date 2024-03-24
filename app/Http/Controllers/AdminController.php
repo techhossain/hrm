@@ -22,11 +22,11 @@ class AdminController extends Controller
     /**
      * Display all employees to admin dashboard
      */
-    public function employee_index()
-    {
-        //
-        return view('admin.employee.index');
-    }
+    // public function employee_index()
+    // {
+    //     //
+    //     return view('admin.employee.index');
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -74,5 +74,59 @@ class AdminController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function leaves()
+    {
+        $user = auth()->user();
+        $helpers = \App\Helpers\Helpers::instance();
+        $media_url = $helpers->user_photo_url($user, 'dp');
+
+        return view('admin.leaves.index', compact('media_url'));
+    }
+
+    public function roster()
+    {
+        $user = auth()->user();
+        $helpers = \App\Helpers\Helpers::instance();
+        $media_url = $helpers->user_photo_url($user, 'dp');
+
+        return view('admin.roster.index', compact('media_url'));
+    }
+
+    public function attendance()
+    {
+        $user = auth()->user();
+        $helpers = \App\Helpers\Helpers::instance();
+        $media_url = $helpers->user_photo_url($user, 'dp');
+
+        return view('admin.attendance.index', compact('media_url'));
+    }
+
+    public function holiday()
+    {
+        $user = auth()->user();
+        $helpers = \App\Helpers\Helpers::instance();
+        $media_url = $helpers->user_photo_url($user, 'dp');
+
+        return view('admin.holiday.index', compact('media_url'));
+    }
+
+    public function designation()
+    {
+        $user = auth()->user();
+        $helpers = \App\Helpers\Helpers::instance();
+        $media_url = $helpers->user_photo_url($user, 'dp');
+
+        return view('admin.designation.index', compact('media_url'));
+    }
+
+    public function department()
+    {
+        $user = auth()->user();
+        $helpers = \App\Helpers\Helpers::instance();
+        $media_url = $helpers->user_photo_url($user, 'dp');
+
+        return view('admin.department.index', compact('media_url'));
     }
 }
