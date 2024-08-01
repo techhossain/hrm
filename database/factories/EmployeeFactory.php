@@ -44,7 +44,7 @@ class EmployeeFactory extends Factory
 
 
             'reporting_to'      => fake()->numberBetween(1, 20),
-            'language_id'       => fake()->numberBetween($languages),
+            'language_id'       => fake()->randomElement($languages),
             'login_permission'  => fake()->boolean(),
             'notification_permission'   => fake()->boolean(),
             'hourly_rate'       => fake()->numberBetween(10, 30),

@@ -36,7 +36,16 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'can:manage_all']], 
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
 
     // Route for Employee list
-    Route::get('/employees', [AdminController::class, 'employee_index'])->name('admin.employees');
+    Route::get('/employees', [EmployeeController::class, 'employee_index'])->name('admin.employees');
+    Route::get('/employees/{id}', [EmployeeController::class, 'single_employee_details'])->name('admin.employees.details');
+
+    // Leaves
+    Route::get('/leaves', [AdminController::class, 'leaves'])->name('admin.employee.leaves');
+    Route::get('/roster', [AdminController::class, 'roster'])->name('admin.employee.roster');
+    Route::get('/attendance', [AdminController::class, 'attendance'])->name('admin.employee.attendance');
+    Route::get('/holiday', [AdminController::class, 'holiday'])->name('admin.employee.holiday');
+    Route::get('/designation', [AdminController::class, 'designation'])->name('admin.employee.designation');
+    Route::get('/department', [AdminController::class, 'department'])->name('admin.employee.department');
 
     // Route for Users list
     Route::get('/users', [UserController::class, 'index'])->name('admin.users');

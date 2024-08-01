@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -55,16 +56,15 @@ class UserController extends Controller
         // Upload photo
         $photo = $request->file('photo');
 
-        if ( !empty($photo) && $photo->isValid() ) {
+        if (!empty($photo) && $photo->isValid()) {
             $user->addMediaFromRequest('photo')->toMediaCollection('dp');
         }
 
         // User role
         $is_admin = $request->is_admin;
-        if($is_admin == "Administrator"){
+        if ($is_admin == "Administrator") {
             $user->is_admin = true;
-        }
-        else if($is_admin == "Employee") {
+        } else if ($is_admin == "Employee") {
             $user->is_admin = false;
         }
 
@@ -115,7 +115,7 @@ class UserController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
 
-        if(isset($request->password)){
+        if (isset($request->password)) {
             $user->password = $request->password;
         }
 
@@ -175,7 +175,8 @@ class UserController extends Controller
     /**
      * Update User Profile
      */
-    public function update_user_profile(Request $request){
+    public function update_user_profile(Request $request)
+    {
         $request->validate([
             'name'  => 'required',
             'email'  => 'required|email',
@@ -187,13 +188,13 @@ class UserController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
 
-        if(isset($request->password)){
+        if (isset($request->password)) {
             $user->password = $request->password;
         }
 
         $photo = $request->file('photo');
 
-        if ( isset($photo) && $photo->isValid() ) {
+        if (isset($photo) && $photo->isValid()) {
             // $user->addMediaFRomRequest('profile_pic')
             //     ->toMediaCollection('Profile Picture');
 
@@ -209,10 +210,4 @@ class UserController extends Controller
             return redirect()->route('admin.users')->with('message', 'User updation Failed');
         }
     }
-
-
-
-
-
-
 }

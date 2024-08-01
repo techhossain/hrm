@@ -22,7 +22,8 @@
 
                         <li class="primary-nav-list__item border-bottom-0">
                             <div class="dropdown">
-                                <a href="#" aria-expanded="false" data-toggle="dropdown" class="t-link w-100 primary-nav-list__link primary-nav-list__link-has-menu text-capitalize">
+                                <a href="#" aria-expanded="false" data-toggle="dropdown"
+                                    class="t-link w-100 primary-nav-list__link primary-nav-list__link-has-menu text-capitalize">
                                     <span class="primary-nav-list__icon--lg t-line-1">
                                         <i class='bx bx-message-detail'></i>
                                     </span>
@@ -32,7 +33,8 @@
                                         <div class="messages__top">
                                             <span class="messages__top-text text-capitalize">recent
                                                 chats</span>
-                                            <a href="#" class="t-link messages__top-link text-capitalize messages__top-text">
+                                            <a href="#"
+                                                class="t-link messages__top-link text-capitalize messages__top-text">
                                                 <span class="t-mr-5 d-inline-block">
                                                     <i class="las la-cog"></i>
                                                 </span>
@@ -44,11 +46,13 @@
                                                 <li class="messages__list-item">
                                                     <a href="#" class="t-link w-100">
                                                         <div class="messages__msg">
-                                                            <div class="messages__avatar messages__avatar-empty t-bg-alpha">
+                                                            <div
+                                                                class="messages__avatar messages__avatar-empty t-bg-alpha">
                                                                 <div class="messages__avatar-replacer text-uppercase">
                                                                     as
                                                                 </div>
-                                                                <div class="messages__avatar-notification messages__avatar-notification--active">
+                                                                <div
+                                                                    class="messages__avatar-notification messages__avatar-notification--active">
                                                                 </div>
                                                             </div>
                                                             <div class="messages__content messages__content--unseen">
@@ -69,7 +73,8 @@
                                                                         are
                                                                         u
                                                                     </span>
-                                                                    <span class="messages__status messages__status--unseen"></span>
+                                                                    <span
+                                                                        class="messages__status messages__status--unseen"></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -78,8 +83,10 @@
                                                 <li class="messages__list-item">
                                                     <a href="#" class="t-link w-100">
                                                         <div class="messages__msg">
-                                                            <div class="messages__avatar messages__avatar-empty t-bg-alpha">
-                                                                <div class="messages__avatar-notification messages__avatar-notification--offline">
+                                                            <div
+                                                                class="messages__avatar messages__avatar-empty t-bg-alpha">
+                                                                <div
+                                                                    class="messages__avatar-notification messages__avatar-notification--offline">
                                                                 </div>
                                                             </div>
                                                             <div class="messages__content messages__content--unseen">
@@ -102,7 +109,8 @@
                                                                         are
                                                                         u
                                                                     </span>
-                                                                    <span class="messages__status messages__status--seen"></span>
+                                                                    <span
+                                                                        class="messages__status messages__status--seen"></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -111,11 +119,13 @@
                                                 <li class="messages__list-item">
                                                     <a href="#" class="t-link w-100">
                                                         <div class="messages__msg">
-                                                            <div class="messages__avatar messages__avatar-empty t-bg-gamma">
+                                                            <div
+                                                                class="messages__avatar messages__avatar-empty t-bg-gamma">
                                                                 <div class="messages__avatar-replacer text-uppercase">
                                                                     tk
                                                                 </div>
-                                                                <div class="messages__avatar-notification messages__avatar-notification--offline">
+                                                                <div
+                                                                    class="messages__avatar-notification messages__avatar-notification--offline">
                                                                 </div>
                                                             </div>
                                                             <div class="messages__content messages__content--unseen">
@@ -135,7 +145,8 @@
                                                                         phone
                                                                         ASAP
                                                                     </span>
-                                                                    <span class="messages__status messages__status--unseen"></span>
+                                                                    <span
+                                                                        class="messages__status messages__status--unseen"></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -144,11 +155,13 @@
                                                 <li class="messages__list-item">
                                                     <a href="#" class="t-link w-100">
                                                         <div class="messages__msg">
-                                                            <div class="messages__avatar messages__avatar-empty t-bg-delta">
+                                                            <div
+                                                                class="messages__avatar messages__avatar-empty t-bg-delta">
                                                                 <div class="messages__avatar-replacer text-uppercase">
                                                                     gp
                                                                 </div>
-                                                                <div class="messages__avatar-notification messages__avatar-notification--active">
+                                                                <div
+                                                                    class="messages__avatar-notification messages__avatar-notification--active">
                                                                 </div>
                                                             </div>
                                                             <div class="messages__content messages__content--unseen">
@@ -171,7 +184,8 @@
                                                                         things
                                                                         anybody...
                                                                     </span>
-                                                                    <span class="messages__status messages__status--seen"></span>
+                                                                    <span
+                                                                        class="messages__status messages__status--seen"></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -180,11 +194,13 @@
                                                 <li class="messages__list-item">
                                                     <a href="#" class="t-link w-100">
                                                         <div class="messages__msg">
-                                                            <div class="messages__avatar messages__avatar-empty t-bg-alpha">
+                                                            <div
+                                                                class="messages__avatar messages__avatar-empty t-bg-alpha">
                                                                 <div class="messages__avatar-replacer text-uppercase">
                                                                     as
                                                                 </div>
-                                                                <div class="messages__avatar-notification messages__avatar-notification--active">
+                                                                <div
+                                                                    class="messages__avatar-notification messages__avatar-notification--active">
                                                                 </div>
                                                             </div>
                                                             <div class="messages__content messages__content--unseen">
@@ -205,7 +221,8 @@
                                                                         are
                                                                         u
                                                                     </span>
-                                                                    <span class="messages__status messages__status--unseen"></span>
+                                                                    <span
+                                                                        class="messages__status messages__status--unseen"></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -214,9 +231,12 @@
                                                 <li class="messages__list-item">
                                                     <a href="#" class="t-link w-100">
                                                         <div class="messages__msg">
-                                                            <div class="messages__avatar messages__avatar-empty t-bg-alpha">
-                                                                <img src="{{ asset('assets/img/user.jpg') }}" alt="Adminage" class="img-fluid w-100" />
-                                                                <div class="messages__avatar-notification messages__avatar-notification--offline">
+                                                            <div
+                                                                class="messages__avatar messages__avatar-empty t-bg-alpha">
+                                                                <img src="{{ asset('assets/img/user.jpg') }}"
+                                                                    alt="Adminage" class="img-fluid w-100" />
+                                                                <div
+                                                                    class="messages__avatar-notification messages__avatar-notification--offline">
                                                                 </div>
                                                             </div>
                                                             <div class="messages__content messages__content--unseen">
@@ -239,7 +259,8 @@
                                                                         are
                                                                         u
                                                                     </span>
-                                                                    <span class="messages__status messages__status--seen"></span>
+                                                                    <span
+                                                                        class="messages__status messages__status--seen"></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -258,7 +279,8 @@
                         </li>
                         <li class="primary-nav-list__item border-bottom-0">
                             <div class="dropdown">
-                                <a href="#" aria-expanded="false" data-toggle="dropdown" class="t-link w-100 primary-nav-list__link primary-nav-list__link-has-menu text-capitalize">
+                                <a href="#" aria-expanded="false" data-toggle="dropdown"
+                                    class="t-link w-100 primary-nav-list__link primary-nav-list__link-has-menu text-capitalize">
                                     <span class="primary-nav-list__icon--lg t-line-1">
                                         <i class='bx bx-bell'></i>
                                     </span>
@@ -267,7 +289,8 @@
                                     <div class="messages messages--primary">
                                         <div class="messages__top">
                                             <span class="messages__top-text text-capitalize">notifications</span>
-                                            <a href="#" class="t-link messages__top-link text-capitalize messages__top-text">
+                                            <a href="#"
+                                                class="t-link messages__top-link text-capitalize messages__top-text">
                                                 mark all
                                                 as read
                                             </a>
@@ -277,11 +300,13 @@
                                                 <li class="messages__list-item">
                                                     <a href="#" class="t-link w-100">
                                                         <div class="messages__msg">
-                                                            <div class="messages__avatar messages__avatar-empty t-bg-alpha">
+                                                            <div
+                                                                class="messages__avatar messages__avatar-empty t-bg-alpha">
                                                                 <div class="messages__avatar-replacer text-uppercase">
                                                                     as
                                                                 </div>
-                                                                <div class="messages__avatar-notification messages__avatar-notification--active">
+                                                                <div
+                                                                    class="messages__avatar-notification messages__avatar-notification--active">
                                                                 </div>
                                                             </div>
                                                             <div class="messages__content messages__content--unseen">
@@ -302,7 +327,8 @@
                                                                         are
                                                                         u
                                                                     </span>
-                                                                    <span class="messages__status messages__status--unseen"></span>
+                                                                    <span
+                                                                        class="messages__status messages__status--unseen"></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -311,9 +337,12 @@
                                                 <li class="messages__list-item">
                                                     <a href="#" class="t-link w-100">
                                                         <div class="messages__msg">
-                                                            <div class="messages__avatar messages__avatar-empty t-bg-alpha">
-                                                                <img src="{{ asset('assets/img/user.jpg') }}" alt="Adminage" class="img-fluid w-100" />
-                                                                <div class="messages__avatar-notification messages__avatar-notification--offline">
+                                                            <div
+                                                                class="messages__avatar messages__avatar-empty t-bg-alpha">
+                                                                <img src="{{ asset('assets/img/user.jpg') }}"
+                                                                    alt="Adminage" class="img-fluid w-100" />
+                                                                <div
+                                                                    class="messages__avatar-notification messages__avatar-notification--offline">
                                                                 </div>
                                                             </div>
                                                             <div class="messages__content messages__content--unseen">
@@ -336,7 +365,8 @@
                                                                         are
                                                                         u
                                                                     </span>
-                                                                    <span class="messages__status messages__status--seen"></span>
+                                                                    <span
+                                                                        class="messages__status messages__status--seen"></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -345,11 +375,13 @@
                                                 <li class="messages__list-item">
                                                     <a href="#" class="t-link w-100">
                                                         <div class="messages__msg">
-                                                            <div class="messages__avatar messages__avatar-empty t-bg-gamma">
+                                                            <div
+                                                                class="messages__avatar messages__avatar-empty t-bg-gamma">
                                                                 <div class="messages__avatar-replacer text-uppercase">
                                                                     tk
                                                                 </div>
-                                                                <div class="messages__avatar-notification messages__avatar-notification--offline">
+                                                                <div
+                                                                    class="messages__avatar-notification messages__avatar-notification--offline">
                                                                 </div>
                                                             </div>
                                                             <div class="messages__content messages__content--unseen">
@@ -369,7 +401,8 @@
                                                                         phone
                                                                         ASAP
                                                                     </span>
-                                                                    <span class="messages__status messages__status--unseen"></span>
+                                                                    <span
+                                                                        class="messages__status messages__status--unseen"></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -378,11 +411,13 @@
                                                 <li class="messages__list-item">
                                                     <a href="#" class="t-link w-100">
                                                         <div class="messages__msg">
-                                                            <div class="messages__avatar messages__avatar-empty t-bg-delta">
+                                                            <div
+                                                                class="messages__avatar messages__avatar-empty t-bg-delta">
                                                                 <div class="messages__avatar-replacer text-uppercase">
                                                                     gp
                                                                 </div>
-                                                                <div class="messages__avatar-notification messages__avatar-notification--active">
+                                                                <div
+                                                                    class="messages__avatar-notification messages__avatar-notification--active">
                                                                 </div>
                                                             </div>
                                                             <div class="messages__content messages__content--unseen">
@@ -405,7 +440,8 @@
                                                                         things
                                                                         anybody...
                                                                     </span>
-                                                                    <span class="messages__status messages__status--seen"></span>
+                                                                    <span
+                                                                        class="messages__status messages__status--seen"></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -414,11 +450,13 @@
                                                 <li class="messages__list-item">
                                                     <a href="#" class="t-link w-100">
                                                         <div class="messages__msg">
-                                                            <div class="messages__avatar messages__avatar-empty t-bg-alpha">
+                                                            <div
+                                                                class="messages__avatar messages__avatar-empty t-bg-alpha">
                                                                 <div class="messages__avatar-replacer text-uppercase">
                                                                     as
                                                                 </div>
-                                                                <div class="messages__avatar-notification messages__avatar-notification--active">
+                                                                <div
+                                                                    class="messages__avatar-notification messages__avatar-notification--active">
                                                                 </div>
                                                             </div>
                                                             <div class="messages__content messages__content--unseen">
@@ -439,7 +477,8 @@
                                                                         are
                                                                         u
                                                                     </span>
-                                                                    <span class="messages__status messages__status--unseen"></span>
+                                                                    <span
+                                                                        class="messages__status messages__status--unseen"></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -448,9 +487,12 @@
                                                 <li class="messages__list-item">
                                                     <a href="#" class="t-link w-100">
                                                         <div class="messages__msg">
-                                                            <div class="messages__avatar messages__avatar-empty t-bg-alpha">
-                                                                <img src="{{ asset('assets/img/user.jpg') }}" alt="Adminage" class="img-fluid w-100" />
-                                                                <div class="messages__avatar-notification messages__avatar-notification--offline">
+                                                            <div
+                                                                class="messages__avatar messages__avatar-empty t-bg-alpha">
+                                                                <img src="{{ asset('assets/img/user.jpg') }}"
+                                                                    alt="Adminage" class="img-fluid w-100" />
+                                                                <div
+                                                                    class="messages__avatar-notification messages__avatar-notification--offline">
                                                                 </div>
                                                             </div>
                                                             <div class="messages__content messages__content--unseen">
@@ -473,7 +515,8 @@
                                                                         are
                                                                         u
                                                                     </span>
-                                                                    <span class="messages__status messages__status--seen"></span>
+                                                                    <span
+                                                                        class="messages__status messages__status--seen"></span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -492,9 +535,11 @@
                         </li>
                         <li class="primary-nav-list__item border-bottom-0 d-none d-lg-block">
                             <div class="dropdown">
-                                <a href="#" aria-expanded="false" data-toggle="dropdown" class="t-link w-100 primary-nav-list__link primary-nav-list__link-has-menu text-capitalize">
+                                <a href="#" aria-expanded="false" data-toggle="dropdown"
+                                    class="t-link w-100 primary-nav-list__link primary-nav-list__link-has-menu text-capitalize">
                                     <div class="rtl-flag">
-                                        <img src="{{ asset('assets/img/flag-1.png') }}" alt="max" class="img-fluid w-100" />
+                                        <img src="{{ asset('assets/img/flag-1.png') }}" alt="max"
+                                            class="img-fluid w-100" />
                                     </div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -502,7 +547,8 @@
                                         <li class="mx-author-menu__list">
                                             <a href="#" class="mx-author-menu__link text-capitalize sm-text">
                                                 <div class="rtl-flag d-inline-block t-mr-8">
-                                                    <img src="{{ asset('assets/img/flag-2.png') }}" alt="max" class="img-fluid w-100" />
+                                                    <img src="{{ asset('assets/img/flag-2.png') }}" alt="max"
+                                                        class="img-fluid w-100" />
                                                 </div>
                                                 french
                                             </a>
@@ -510,7 +556,8 @@
                                         <li class="mx-author-menu__list">
                                             <a href="#" class="mx-author-menu__link text-capitalize sm-text">
                                                 <div class="rtl-flag d-inline-block t-mr-8">
-                                                    <img src="{{ asset('assets/img/flag-3.png') }}" alt="max" class="img-fluid w-100" />
+                                                    <img src="{{ asset('assets/img/flag-3.png') }}" alt="max"
+                                                        class="img-fluid w-100" />
                                                 </div>
                                                 USA
                                             </a>
@@ -518,7 +565,8 @@
                                         <li class="mx-author-menu__list">
                                             <a href="#" class="mx-author-menu__link text-capitalize sm-text">
                                                 <div class="rtl-flag d-inline-block t-mr-8">
-                                                    <img src="{{ asset('assets/img/flag-4.png') }}" alt="max" class="img-fluid w-100" />
+                                                    <img src="{{ asset('assets/img/flag-4.png') }}" alt="max"
+                                                        class="img-fluid w-100" />
                                                 </div>
                                                 UK
                                             </a>
@@ -529,14 +577,16 @@
                         </li>
                         <li class="primary-nav-list__item border-bottom-0">
                             <div class="dropdown">
-                                <a href="#" aria-expanded="false" data-toggle="dropdown" class="t-link w-100 primary-nav-list__link primary-nav-list__link-has-menu text-capitalize">
+                                <a href="#" aria-expanded="false" data-toggle="dropdown"
+                                    class="t-link w-100 primary-nav-list__link primary-nav-list__link-has-menu text-capitalize">
                                     <div class="d-flex align-items-center">
                                         <span class="mx-user mx-user--sm">
                                             <img src="{{ $media_url }}" alt="max" class="img-fluid w-100" />
                                         </span>
                                         <span class="d-none d-lg-inline-block t-ml-8">
                                             admin
-                                            <span class="t-ml-5 d-inline-block xsm-text" data-feather="chevron-down"></span>
+                                            <span class="t-ml-5 d-inline-block xsm-text"
+                                                data-feather="chevron-down"></span>
                                         </span>
                                     </div>
                                 </a>
@@ -554,25 +604,14 @@
                                             <hr class="mx-hr bg-light m-0">
                                         </li>
                                         <li class="mx-author-menu__list">
-                                            <a href="{{ route('admin.user.profile') }}" class="mx-author-menu__link text-capitalize">
+                                            <a href="{{ route('admin.user.profile') }}"
+                                                class="mx-author-menu__link text-capitalize">
                                                 <div class="d-flex align-items-center">
                                                     <span class="xxlg-text t-mr-8 d-inline-block t-line-1">
                                                         <i class='bx bx-user-circle'></i>
                                                     </span>
                                                     <span class="d-inline-block t-line-1 sm-text">
                                                         profile
-                                                    </span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="mx-author-menu__list">
-                                            <a href="#" class="mx-author-menu__link text-capitalize">
-                                                <div class="d-flex align-items-center">
-                                                    <span class="xxlg-text t-mr-8 d-inline-block t-line-1">
-                                                        <i class='bx bx-wallet'></i>
-                                                    </span>
-                                                    <span class="d-inline-block t-line-1 sm-text">
-                                                        my wallet
                                                     </span>
                                                 </div>
                                             </a>
@@ -593,24 +632,13 @@
                                             <a href="#" class="mx-author-menu__link text-capitalize">
                                                 <div class="d-flex align-items-center">
                                                     <span class="xxlg-text t-mr-8 d-inline-block t-line-1">
-                                                        <i class='bx bx-help-circle'></i>
-                                                    </span>
-                                                    <span class="d-inline-block t-line-1 sm-text">
-                                                        help
-                                                    </span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="mx-author-menu__list">
-                                            <a href="#" class="mx-author-menu__link text-capitalize">
-                                                <div class="d-flex align-items-center">
-                                                    <span class="xxlg-text t-mr-8 d-inline-block t-line-1">
                                                         <i class='bx bx-log-out-circle'></i>
                                                     </span>
 
                                                     <form action="{{ route('user.logout') }}" method="POST">
                                                         @csrf
-                                                        <button class="btn btn-link text-light text-decoration-none" type="submit">
+                                                        <button class="btn btn-link text-light text-decoration-none"
+                                                            type="submit">
                                                             <span class="d-inline-block t-line-1 sm-text">Logout</span>
                                                         </button>
                                                     </form>

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Helpers;
+use App\Models\Employee;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class EmployeeController extends Controller
 {
@@ -18,7 +21,8 @@ class EmployeeController extends Controller
         return view('employee.dashboard', compact('media_url'));
     }
 
-    public function attendance(){
+    public function attendance()
+    {
         $user = auth()->user();
         $helpers = \App\Helpers\Helpers::instance();
         $media_url = $helpers->user_photo_url($user, 'dp');
@@ -26,7 +30,8 @@ class EmployeeController extends Controller
         return view('employee.attendance', compact('media_url'));
     }
 
-    public function leaves(){
+    public function leaves()
+    {
         $user = auth()->user();
         $helpers = \App\Helpers\Helpers::instance();
         $media_url = $helpers->user_photo_url($user, 'dp');
@@ -34,7 +39,8 @@ class EmployeeController extends Controller
         return view('employee.leaves', compact('media_url'));
     }
 
-    public function holiday(){
+    public function holiday()
+    {
         $user = auth()->user();
         $helpers = \App\Helpers\Helpers::instance();
         $media_url = $helpers->user_photo_url($user, 'dp');
@@ -93,6 +99,31 @@ class EmployeeController extends Controller
     }
 
 
+    /**
+     * Show Employee list to Admin Panel
+     */
+    public function employee_index()
+    {
+        //
+        $employees = Employee::paginate(20);
+        return view('admin.employee.index', compact('employees'));
+    }
+
+    /**
+     * Show single Employee information
+     */
+    public function single_employee_details($id){
+
+        $user = auth()->user();
+        
+        $employee = Employee::find($id);
+
+        $helpers = Helpers::instance();
+
+        $media_url = $helpers->user_photo_url($user, 'dp');
+
+        return view('admin.employee.employee-details', compact('employee', 'media_url'));
+    }
 
     /**
      * Show User Profile Page.
@@ -109,7 +140,8 @@ class EmployeeController extends Controller
     /**
      * Update User Profile
      */
-    public function update_employee_profile(Request $request){
+    public function update_employee_profile(Request $request)
+    {
         $request->validate([
             'name'  => 'required',
             'email'  => 'required|email',
@@ -121,13 +153,13 @@ class EmployeeController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
 
-        if(isset($request->password)){
+        if (isset($request->password)) {
             $user->password = $request->password;
         }
 
         $photo = $request->file('photo');
 
-        if ( isset($photo) && $photo->isValid() ) {
+        if (isset($photo) && $photo->isValid()) {
             // $user->addMediaFRomRequest('profile_pic')
             //     ->toMediaCollection('Profile Picture');
 
@@ -143,7 +175,4 @@ class EmployeeController extends Controller
             return redirect()->route('admin.users')->with('message', 'User updation Failed');
         }
     }
-
-
-
 }

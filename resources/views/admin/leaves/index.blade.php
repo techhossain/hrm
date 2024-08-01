@@ -10,55 +10,13 @@
         <div class="cards t-bg-white t-shadow h-100">
           <div class="cards__header t-pt-30 t-pb-30 px-3 px-md-4 border-bottom">
             <h6 class="mt-0 mb-0 text-capitalize">
-              Employees List
+              Leaves
             </h6>
           </div>
           <div class="cards__body t-pt-30 px-3 px-md-4 t-pb-30">
             <p class="sm-text">
-              All the employees will be shown here
+              Leaves
             </p>
-            <div class="table-responsive">
-              <table class="table">
-                <thead class="table-light">
-                  <tr>
-                    <th scope="col">Employee ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-
-                  @foreach ($employees as $employee)
-                  <tr>
-                    <td>EMP-{{$employee->id}}</td>
-                    <td>{{$employee->user->name}}</td>
-                    <td>{{$employee->user->email}}</td>
-                    <td>{{ $employee->status == 1 ? 'Active' : 'Inactive'}}</td>
-                    <td>
-                      <div class="dropdown show">
-                        <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="bx bx-dots-vertical"></i>
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <a class="dropdown-item" href="{{ route('admin.employees.details', $employee->id )}}"><i
-                              class="bx bx-show"></i> View</a>
-                          <a class="dropdown-item" href="#"><i class="bx bx-edit-alt"></i> Edit</a>
-                          <a class="dropdown-item" href="#"><i class="bx bx-trash-alt"></i> Delete</a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  @endforeach
-
-
-
-                </tbody>
-              </table>
-            </div>
           </div>
         </div>
       </div>
